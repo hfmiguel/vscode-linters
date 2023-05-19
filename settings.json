@@ -1,0 +1,69 @@
+{
+	/** EXECUTABLES */
+	"php.validate.executablePath": "/usr/bin/php",
+	"phpcs.executablePath": "/home/felix/.config/composer/vendor/bin/phpcs",
+	"phpSniffer.executablesFolder": "/home/felix/.config/composer/vendor/bin/",
+	"prettier.prettierPath": "/usr/lib/node_modules/prettier",
+	"php.validate.enable": true,
+	"php.validate.run": "onType",
+	"intelephense.environment.phpVersion": "8.2",
+	// "phpcs.standard": "/home/felix/phpcs.xml",
+	// "phpSniffer.standard": "/home/felix/phpcs.xml",
+	/** FORMAT RULES */
+	"phpcs.standard": "PSR12",
+	"phpSniffer.standard": "PSR12",
+	"intelephense.format.braces": "psr12",
+	/** PHP CS */
+	"phpcs.enable": true,
+	"phpcs.lintOnSave": true,
+	"phpcs.lintOnOpen": true,
+	"phpcs.lintOnType": true,
+	"phpcs.autoConfigSearch": true,
+	"phpcs.showWarnings": true,
+	"phpcs.errorSeverity": 1,
+	"phpcs.warningSeverity": 1,
+	"phpcs.showSources": true,
+	"phpSniffer.run": "onType",
+	/***  PRETTIER */
+	"prettier.enableDebugLogs": true,
+	"prettier.resolveGlobalModules": true,
+	"eslint.timeBudget.onValidation": {
+		"warning": 500,
+		"error": 1000
+	},
+	"prettier.printWidth": 80,
+	"prettier.tabWidth": 2,
+	"prettier.useTabs": true,
+	"prettier.semi": true,
+	"prettier.singleQuote": true,
+	"prettier.jsxSingleQuote": false,
+	"prettier.trailingComma": "all",
+	"prettier.bracketSpacing": true,
+	"prettier.bracketSameLine": false,
+	"prettier.arrowParens": "avoid",
+	"prettier.requirePragma": true,
+	"prettier.insertPragma": true,
+	"prettier.endOfLine": "lf",
+	"prettier.requireConfig": false,
+	"prettier.singleAttributePerLine": true,
+	"prettier.htmlWhitespaceSensitivity": "strict",
+	/** ESLINT */
+	"eslint.run": "onType",
+	"eslint.enable": true,
+	"eslint.options": {
+		"extensions": [".js", ".html", ".vue", ".jsx", ".tsx", ".ts"]
+	},
+	"eslint.validate": [
+		"js",
+		"babel",
+		"babelrc",
+		"babel-javascript",
+		"javascript",
+		"typescript",
+		"html",
+		"vue",
+		"javascriptreact",
+		"typescriptreact"
+	],
+	"eslint.probe": ["javascript", "javascriptreact", "vue"]
+}
