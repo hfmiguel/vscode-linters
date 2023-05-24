@@ -1,12 +1,7 @@
-
-
 ### WSL First steps.
 
 ```
-apt-get update
-apt-get install aptitude 
-aptitude install ssh wget ca-certificates git unzip curl
-
+apt-get update && apt-get install aptitude && aptitude install build-essential -y && aptitude install ssh wget ca-certificates git unzip curl
 
 ### PHP
 
@@ -25,7 +20,17 @@ php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo '
 php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 ```
 
+### NODE
+cd 
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+aptitude update &&
+aptitude install nodejs -y
 
 
 ### PHP CS ( NON ROOT )
 composer global require squizlabs/php_codesniffer
+
+### JS LINTERS ( ROOT )
+npm i -g eslint
+npm i -g prettier eslint-config-prettier eslint-plugin-prettier
+npm install --global yarn
