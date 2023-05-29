@@ -21,16 +21,20 @@ php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 ```
 
 ### NODE
+```
 cd 
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
 aptitude update &&
 aptitude install nodejs -y
-
+```
 
 ### PHP CS ( NON ROOT )
+```
 composer global require squizlabs/php_codesniffer
-
+```
 ### JS LINTERS ( ROOT )
+```
 npm i -g eslint
 npm i -g prettier eslint-config-prettier eslint-plugin-prettier
 npm install --global yarn
+```
