@@ -38,3 +38,12 @@ npm i -g eslint
 npm i -g prettier eslint-config-prettier eslint-plugin-prettier
 npm install --global yarn
 ```
+
+### GIT ( NON ROOT ) 
+```
+- For local config . If want to set this settings for all projects ,use : git config --global 
+git config pull.rebase false 
+git config user.name "Your Username"
+git config user.email "Your git email "
+```
+
