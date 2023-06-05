@@ -39,7 +39,27 @@ phpcs --config-set default_standard PSR12
 phpcs --config-set severity 1
 phpcs --config-set colors 1
 phpcs --config-set installed_paths /home/$USER/.config/composer/vendor/phpcompatibility/php-compatibility
+
+phpcs --config-show   ### show configs
 ```
+
+### CUSTOM PHPCS RULES
+- create a file into a safe place, ex: /home/$USER/phpcs.xml
+
+```
+<?xml version="1.0"?>
+<ruleset name="Custom ruleset">
+    <description>My rules for PHP CodeSniffer</description>
+    <rule ref="PHPCompatibility"/>
+    <rule ref="PSR2"/>
+</ruleset>
+
+- And change your phpcs rule
+
+phpcs --config-set default_standard /home/$USER/phpcs.xml
+```
+- dont forget to update your VSCODE path 
+
 ### JS LINTERS ( ROOT )
 ```
 npm i -g eslint
