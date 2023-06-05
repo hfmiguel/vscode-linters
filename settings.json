@@ -1,17 +1,15 @@
 {
 	/** EXECUTABLES */
 	"php.validate.executablePath": "/usr/bin/php",
-	"phpcs.executablePath": "/home/felix/.config/composer/vendor/bin/phpcs",
-	"phpSniffer.executablesFolder": "/home/felix/.config/composer/vendor/bin/",
+	"phpcs.executablePath": "/usr/local/bin/phpcs",
+	"phpSniffer.executablesFolder": "/usr/local/bin",
 	"prettier.prettierPath": "/usr/lib/node_modules/prettier",
 	"php.validate.enable": true,
 	"php.validate.run": "onType",
-	"intelephense.environment.phpVersion": "8.2",
-	// "phpcs.standard": "/home/felix/phpcs.xml",
-	// "phpSniffer.standard": "/home/felix/phpcs.xml",
+	"editor.showUnused": true,
 	/** FORMAT RULES */
-	"phpcs.standard": "PSR12",
-	"phpSniffer.standard": "PSR12",
+        "phpSniffer.standard": "/home/felix/phpcs.xml",
+        "phpcs.standard":  "/home/felix/phpcs.xml",
 	"intelephense.format.braces": "psr12",
 	/** PHP CS */
 	"phpcs.enable": true,
@@ -23,7 +21,15 @@
 	"phpcs.errorSeverity": 1,
 	"phpcs.warningSeverity": 1,
 	"phpcs.showSources": true,
+        "phpcs.composerJsonPath": "composer.json",
 	"phpSniffer.run": "onType",
+    /** INTELEPHENSE */
+	"intelephense.environment.documentRoot": "${workspaceFolder}",
+	"intelephense.environment.includePaths": [
+		"${workspaceFolder}/vendor",
+		"vendor",
+		"/usr/bin/php"
+	],
 	/***  PRETTIER */
 	"prettier.enableDebugLogs": true,
 	"prettier.resolveGlobalModules": true,
@@ -43,7 +49,6 @@
 	"prettier.arrowParens": "avoid",
 	"prettier.requirePragma": true,
 	"prettier.insertPragma": true,
-	"prettier.endOfLine": "lf",
 	"prettier.requireConfig": false,
 	"prettier.singleAttributePerLine": true,
 	"prettier.htmlWhitespaceSensitivity": "strict",
