@@ -34,6 +34,7 @@ composer global require squizlabs/php_codesniffer --dev
 composer global require phpcompatibility/php-compatibility --dev
 ### Create a shortcut to phpcs to run from anywhere in cli
 sudo ln -s /home/$USER/.config/composer/vendor/squizlabs/php_codesniffer/bin/phpcs /usr/local/bin/phpcs
+sudo ln -s /home/$USER/.config/composer/vendor/squizlabs/php_codesniffer/bin/phpcbf /usr/local/bin/phpcbf
 phpcs --config-set php_path /usr/bin/php
 phpcs --config-set default_standard PSR12
 phpcs --config-set severity 1
