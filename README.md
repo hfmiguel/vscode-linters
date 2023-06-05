@@ -61,6 +61,65 @@ phpcs --config-set default_standard /home/$USER/phpcs.xml
 ```
 - dont forget to update your VSCODE path 
 
+### USING PHPCS
+```
+phpcs -p You/Folder  or Your/Folder/File.php
+
+Example: 
+
+phpcs /home/YourUser/projetos/projectTest/app/Enums/Example.php -p -v
+
+### Output
+
+Registering sniffs in the Custom ruleset standard... DONE (177 sniffs registered)
+Creating file list... DONE (1 files in queue)
+Changing into directory /home/YourUser/projetos/projectTest/app/Enums
+Processing SourceType.php [PHP => 180 tokens in 34 lines]... DONE in 9ms (10 errors, 0 warnings)
+
+FILE: /home/YourUser/projetos/projectTest/app/Enums/Example.php
+---------------------------------------------------------------------------------------------
+FOUND 10 ERRORS AFFECTING 6 LINES
+---------------------------------------------------------------------------------------------
+  7 | ERROR | [x] Expected 1 space before "int"; 0 found
+  7 | ERROR | [x] Opening brace of a enum must be on the line after the definition
+ 16 | ERROR | [x] Expected 1 space(s) after MATCH keyword; 0 found
+ 16 | ERROR | [ ] "$this" can no longer be used in a plain function or method since PHP 7.1.
+ 19 | ERROR | [x] Blank line found at end of control structure
+ 26 | ERROR | [ ] "$this" can no longer be used in a plain function or method since PHP 7.1.
+ 26 | ERROR | [ ] Late static binding is not supported outside of class scope.
+ 31 | ERROR | [ ] "$this" can no longer be used in a plain function or method since PHP 7.1.
+ 31 | ERROR | [ ] Late static binding is not supported outside of class scope.
+ 34 | ERROR | [x] The closing brace for the enum must go on the next line after the body
+---------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 5 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+---------------------------------------------------------------------------------------------
+Time: 91ms; Memory: 10MB
+
+
+And , to fix .
+
+phpcbf /home/YourUser/projetos/projectTest/app/Enums/Example.php -p -v
+
+
+### Output
+
+PHPCBF RESULT SUMMARY
+-----------------------------------------------------------------------------------------
+FILE                                                                     FIXED  REMAINING
+-----------------------------------------------------------------------------------------
+/home/YourUser/projetos/projectTest/app/Enums/Example.php                  5      5
+-----------------------------------------------------------------------------------------
+A TOTAL OF 5 ERRORS WERE FIXED IN 1 FILE
+-----------------------------------------------------------------------------------------
+
+Time: 114ms; Memory: 10MB
+
+
+### in this scenario , phpcbf fixed 5 errors but cant fix 5 , you need to fix manually.
+
+```
+
+
 ### JS LINTERS ( ROOT )
 ```
 npm i -g eslint
