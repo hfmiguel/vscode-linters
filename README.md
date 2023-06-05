@@ -30,7 +30,15 @@ aptitude install nodejs -y
 
 ### PHP CS ( NON ROOT )
 ```
-composer global require squizlabs/php_codesniffer
+composer global require squizlabs/php_codesniffer --dev
+composer global require phpcompatibility/php-compatibility --dev
+### Create a shortcut to phpcs to run from anywhere in cli
+sudo ln -s /home/$USER/.config/composer/vendor/squizlabs/php_codesniffer/bin/phpcs /usr/local/bin/phpcs
+phpcs --config-set php_path /usr/bin/php
+phpcs --config-set default_standard PSR12
+phpcs --config-set severity 1
+phpcs --config-set colors 1
+phpcs --config-set installed_paths /home/$USER/.config/composer/vendor/phpcompatibility/php-compatibility
 ```
 ### JS LINTERS ( ROOT )
 ```
