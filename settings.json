@@ -3,13 +3,15 @@
 	"php.validate.executablePath": "/usr/bin/php",
 	"phpcs.executablePath": "/usr/local/bin/phpcs",
 	"phpSniffer.executablesFolder": "/usr/local/bin",
+	"intelephense.environment.phpVersion": "8.2.6",
 	"prettier.prettierPath": "/usr/lib/node_modules/prettier",
 	"php.validate.enable": true,
 	"php.validate.run": "onType",
+    "php.suggest.basic": true,
 	"editor.showUnused": true,
 	/** FORMAT RULES */
-        "phpSniffer.standard": "/home/felix/phpcs.xml",
-        "phpcs.standard":  "/home/felix/phpcs.xml",
+    "phpSniffer.standard": "/home/$USER/phpcs.xml",
+    "phpcs.standard":  "/home/$USER/phpcs.xml",
 	"intelephense.format.braces": "psr12",
 	/** PHP CS */
 	"phpcs.enable": true,
@@ -21,15 +23,36 @@
 	"phpcs.errorSeverity": 1,
 	"phpcs.warningSeverity": 1,
 	"phpcs.showSources": true,
-        "phpcs.composerJsonPath": "composer.json",
+    "phpcs.composerJsonPath": "composer.json",
 	"phpSniffer.run": "onType",
     /** INTELEPHENSE */
+    "intelephense.files.associations": ["*.php", "*.phtml"],
 	"intelephense.environment.documentRoot": "${workspaceFolder}",
 	"intelephense.environment.includePaths": [
+        "${workspaceFolder}",
 		"${workspaceFolder}/vendor",
-		"vendor",
-		"/usr/bin/php"
+        "${workspaceFolder}/vendor/laravel",
+        "vendor"
 	],
+    "intelephense.files.exclude": [
+        "**/.git/**",
+        "**/.svn/**",
+        "**/.hg/**",
+        "**/CVS/**",
+        "**/.DS_Store/**",
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/resources/views/**"
+    ],
+	"intelephense.rename.namespaceMode": "all",
+	"intelephense.diagnostics.enable": true,
+	"intelephense.diagnostics.run": "onSave",
+    "intelephense.diagnostics.argumentCount": true,
+	"intelephense.diagnostics.unexpectedTokens": true,
+	"intelephense.diagnostics.undefinedFunctions": true,
+	"intelephense.diagnostics.undefinedSymbols": true,
+	"intelephense.diagnostics.undefinedTypes": true,
+	"intelephense.diagnostics.undefinedMethods": true,
 	/***  PRETTIER */
 	"prettier.enableDebugLogs": true,
 	"prettier.resolveGlobalModules": true,
@@ -56,7 +79,7 @@
 	"eslint.run": "onType",
 	"eslint.enable": true,
 	"eslint.options": {
-		"extensions": [".js", ".html", ".vue", ".jsx", ".tsx", ".ts"]
+		"extensions": [".js", ".vue", ".jsx", ".tsx", ".ts"]
 	},
 	"eslint.validate": [
 		"js",
