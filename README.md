@@ -135,3 +135,44 @@ git config user.name "Your Username"
 git config user.email "Your git email "
 ```
 
+
+### EXTENSIONS 
+```
+Nome: PHP Intelephense
+ID: bmewburn.vscode-intelephense-client
+Descrição: PHP code intelligence for Visual Studio Code
+Editor: Ben Mewburn
+Link do Marketplace do VS: https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client
+```
+
+```
+Nome: phpcs
+ID: shevaua.phpcs
+Descrição: PHP CodeSniffer for Visual Studio Code
+Editor: shevaua
+Link do Marketplace do VS: https://marketplace.visualstudio.com/items?itemName=shevaua.phpcs
+```
+
+```
+Nome: PHP Sniffer
+ID: wongjn.php-sniffer
+Descrição: Uses PHP_CodeSniffer to format and lint PHP code.
+Editor: wongjn
+Link do Marketplace do VS: https://marketplace.visualstudio.com/items?itemName=wongjn.php-sniffer
+```
+
+```
+Nome: ESLint
+ID: dbaeumer.vscode-eslint
+Descrição: Integrates ESLint JavaScript into VS Code.
+Editor: Microsoft
+Link do Marketplace do VS: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+```
+
+```
+Nome: Prettier - Code formatter
+ID: esbenp.prettier-vscode
+Descrição: Code formatter using prettier
+Editor: Prettier
+Link do Marketplace do VS: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+```
