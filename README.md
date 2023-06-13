@@ -10,7 +10,7 @@ sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gp
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
 aptitude update -y
 aptitude install -y php8.2
-aptitude install -y php-intl php-mysql php-sqlite3 php-gd php-cli php-common php-zip php-curl php-xml php-bcmath
+aptitude install -y php-intl php-mysql php-sqlite3 php-gd php-cli php-common php-zip php-curl php-xml php-bcmath php-xdebug php-soap php-pocv php-apcu php-redis php-memcached 
 
 ### COMPOSER 
 cd ~
@@ -32,6 +32,10 @@ aptitude install nodejs -y
 ```
 composer global require squizlabs/php_codesniffer --dev
 composer global require phpcompatibility/php-compatibility --dev
+composer global require roave/security-advisories --dev
+composer global require dealerdirect/phpcodesniffer-composer-installer --dev
+
+
 ### Create a shortcut to phpcs to run from anywhere in cli
 sudo ln -s /home/$USER/.config/composer/vendor/squizlabs/php_codesniffer/bin/phpcs /usr/local/bin/phpcs
 sudo ln -s /home/$USER/.config/composer/vendor/squizlabs/php_codesniffer/bin/phpcbf /usr/local/bin/phpcbf
@@ -39,7 +43,7 @@ phpcs --config-set php_path /usr/bin/php
 phpcs --config-set default_standard PSR12
 phpcs --config-set severity 1
 phpcs --config-set colors 1
-phpcs --config-set installed_paths /home/$USER/.config/composer/vendor/phpcompatibility/php-compatibility
+phpcs --config-set installed_paths /home/$USER/.config/composer/vendor/phpcompatibility/php-compatibility,/home/felix/.config/composer/vendor/dealerdirect/phpcodesniffer-composer-installer/src
 
 phpcs --config-show   ### show configs
 ```
