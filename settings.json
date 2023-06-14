@@ -1,40 +1,51 @@
 {
-	/** EXECUTABLES */
-	"php.validate.executablePath": "/usr/bin/php",
-	"phpcs.executablePath": "/usr/local/bin/phpcs",
-	"phpSniffer.executablesFolder": "/usr/local/bin",
-	"intelephense.environment.phpVersion": "8.2.6",
-	"prettier.prettierPath": "/usr/lib/node_modules/prettier",
-	"php.validate.enable": true,
-	"php.validate.run": "onType",
-    "php.suggest.basic": true,
-	"editor.showUnused": true,
-	/** FORMAT RULES */
-	/** CHANGE $USER for your username */ 
-    "phpSniffer.standard": "/home/$USER/phpcs.xml",
-    "phpcs.standard":  "/home/$USER/phpcs.xml",
-	"intelephense.format.braces": "psr12",
-	/** PHP CS */
-	"phpcs.enable": true,
-	"phpcs.lintOnSave": true,
-	"phpcs.lintOnOpen": true,
-	"phpcs.lintOnType": true,
-	"phpcs.autoConfigSearch": true,
-	"phpcs.showWarnings": true,
-	"phpcs.errorSeverity": 1,
-	"phpcs.warningSeverity": 1,
-	"phpcs.showSources": true,
+    /** EXECUTABLES */
+    "php.validate.executablePath": "/usr/bin/php",
+    "phpcs.executablePath": "/usr/local/bin/phpcs",
+    "phpSniffer.executablesFolder": "/home/felix/.config/composer/vendor/squizlabs/php_codesniffer/bin",
+    "intelephense.environment.phpVersion": "8.2.6",
+    "prettier.prettierPath": "/usr/lib/node_modules/prettier",
+    /*** PHP */
+    "php.validate.enable": true,
+    "php.validate.run": "onSave",
+    // "php.suggest.basic": false,
+    /*** PHP */
+    /** FORMAT RULES */
+    "phpSniffer.standard": "/home/felix/phpcs.xml",
+    "phpcs.standard": "/home/felix/phpcs.xml",
+    "intelephense.format.braces": "psr12",
+    /** FORMAT RULES */
+
+    /** PHP CS */
+    "phpcs.enable": true,
+    "phpcs.lintOnSave": true,
+    "phpcs.lintOnOpen": true,
+    "phpcs.lintOnType": false,
+    "phpcs.autoConfigSearch": true,
+    "phpcs.showWarnings": true,
+    "phpcs.errorSeverity": 1,
+    "phpcs.warningSeverity": 1,
+    "phpcs.showSources": true,
     "phpcs.composerJsonPath": "composer.json",
-	"phpSniffer.run": "onType",
+    "phpSniffer.run": "onSave",
+    /** PHP CS */
+
     /** INTELEPHENSE */
-    "intelephense.files.associations": ["*.php", "*.phtml"],
-	"intelephense.environment.documentRoot": "${workspaceFolder}",
-	"intelephense.environment.includePaths": [
+    "intelephense.files.associations": [
+        "*.php",
+        "*.inc",
+        "*.phtml"
+    ],
+    "intelephense.environment.documentRoot": "${workspaceFolder}/public",
+    "intelephense.environment.includePaths": [
         "${workspaceFolder}",
-		"${workspaceFolder}/vendor",
+        "${workspaceFolder}/app",
+        "${workspaceFolder}/app/Models",
+        "${workspaceFolder}/vendor",
         "${workspaceFolder}/vendor/laravel",
-        "vendor"
-	],
+        "**/vendor/**",
+        "**/Models/**",
+    ],
     "intelephense.files.exclude": [
         "**/.git/**",
         "**/.svn/**",
@@ -43,56 +54,71 @@
         "**/.DS_Store/**",
         "**/node_modules/**",
         "**/bower_components/**",
-        "**/resources/views/**"
+        "**/resources/views/**",
+        "**/.js",
+        "**/.png",
+        "**/.jpg",
+        "**/.css",
+        "**/.pdf",
+        "**/.txt",
+        "*.blade.php",
+        "**/public/**",
+        "**/storage/**",
     ],
-	"intelephense.rename.namespaceMode": "all",
-	"intelephense.diagnostics.enable": true,
-	"intelephense.diagnostics.run": "onSave",
+    "intelephense.rename.namespaceMode": "all",
+    "intelephense.environment.shortOpenTag": true,
+    "intelephense.diagnostics.enable": true,
+    "intelephense.diagnostics.run": "onType",
     "intelephense.diagnostics.argumentCount": true,
-	"intelephense.diagnostics.unexpectedTokens": true,
-	"intelephense.diagnostics.undefinedFunctions": true,
-	"intelephense.diagnostics.undefinedSymbols": true,
-	"intelephense.diagnostics.undefinedTypes": true,
-	"intelephense.diagnostics.undefinedMethods": true,
-	/***  PRETTIER */
-	"prettier.enableDebugLogs": true,
-	"prettier.resolveGlobalModules": true,
-	"eslint.timeBudget.onValidation": {
-		"warning": 500,
-		"error": 1000
-	},
-	"prettier.printWidth": 80,
-	"prettier.tabWidth": 2,
-	"prettier.useTabs": true,
-	"prettier.semi": true,
-	"prettier.singleQuote": true,
-	"prettier.jsxSingleQuote": false,
-	"prettier.trailingComma": "all",
-	"prettier.bracketSpacing": true,
-	"prettier.bracketSameLine": false,
-	"prettier.arrowParens": "avoid",
-	"prettier.requirePragma": true,
-	"prettier.insertPragma": true,
-	"prettier.requireConfig": false,
-	"prettier.singleAttributePerLine": true,
-	"prettier.htmlWhitespaceSensitivity": "strict",
-	/** ESLINT */
-	"eslint.run": "onType",
-	"eslint.enable": true,
-	"eslint.options": {
-		"extensions": [".js", ".vue", ".jsx", ".tsx", ".ts"]
-	},
-	"eslint.validate": [
-		"js",
-		"babel",
-		"babelrc",
-		"babel-javascript",
-		"javascript",
-		"typescript",
-		"html",
-		"vue",
-		"javascriptreact",
-		"typescriptreact"
-	],
-	"eslint.probe": ["javascript", "javascriptreact", "vue"]
+    "intelephense.diagnostics.unexpectedTokens": true,
+    "intelephense.diagnostics.undefinedFunctions": false,
+    "intelephense.diagnostics.undefinedSymbols": true,
+    "intelephense.diagnostics.undefinedTypes": false,
+    "intelephense.diagnostics.undefinedMethods": false,
+    "intelephense.diagnostics.undefinedConstants": true,
+    "intelephense.diagnostics.undefinedVariables": true,
+    "intelephense.diagnostics.undefinedProperties": false,
+    "intelephense.diagnostics.undefinedClassConstants": true,
+    /** INTELEPHENSE */
+    /***  PRETTIER */
+    "prettier.enableDebugLogs": true,
+    "prettier.resolveGlobalModules": true,
+    "eslint.timeBudget.onValidation": {
+        "warning": 500,
+        "error": 1000
+    },
+    "prettier.printWidth": 80,
+    "prettier.tabWidth": 2,
+    "prettier.useTabs": true,
+    "prettier.semi": true,
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": false,
+    "prettier.trailingComma": "all",
+    "prettier.bracketSpacing": true,
+    "prettier.bracketSameLine": false,
+    "prettier.arrowParens": "avoid",
+    "prettier.requirePragma": true,
+    "prettier.insertPragma": true,
+    "prettier.requireConfig": false,
+    "prettier.singleAttributePerLine": true,
+    "prettier.htmlWhitespaceSensitivity": "strict",
+    /** ESLINT */
+    "eslint.run": "onType",
+    "eslint.enable": true,
+    "eslint.options": {
+        "extensions": [ ".js", ".vue", ".jsx", ".tsx", ".ts" ]
+    },
+    "eslint.validate": [
+        "js",
+        "babel",
+        "babelrc",
+        "babel-javascript",
+        "javascript",
+        "typescript",
+        "html",
+        "vue",
+        "javascriptreact",
+        "typescriptreact"
+    ],
+    "eslint.probe": [ "javascript", "javascriptreact", "vue" ]
 }
