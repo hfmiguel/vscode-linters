@@ -10,6 +10,7 @@
     "php.suggest.basic": true,
 	"editor.showUnused": true,
 	/** FORMAT RULES */
+	/** CHANGE $USER for your username */ 
     "phpSniffer.standard": "/home/$USER/phpcs.xml",
     "phpcs.standard":  "/home/$USER/phpcs.xml",
 	"intelephense.format.braces": "psr12",
