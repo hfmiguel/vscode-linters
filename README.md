@@ -32,7 +32,6 @@ aptitude install nodejs -y
 ```
 composer global require squizlabs/php_codesniffer --dev
 composer global require phpcompatibility/php-compatibility --dev
-composer global require roave/security-advisories --dev
 composer global require dealerdirect/phpcodesniffer-composer-installer --dev
 
 
