@@ -25,8 +25,10 @@ php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo '
 php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 ```
 
-### NODE
+### NODE ( root ) 
 ```
+sudo su
+
 cd 
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
 aptitude update &&
