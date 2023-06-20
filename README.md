@@ -82,9 +82,11 @@ phpcs --config-set default_standard /home/$USER/phpcs.xml
   - Click to open : Workspace Settings
 
 - Why ? Because some config not work if you put into your User Settings ( settings that are sync with your github/microsoft account )
+- After open your settings , copy the settings.json content to your
 
-- After open your settings , copy the settings.json content to your.
+![Alt text](image.png)
 
+------
 
 
 ### USING PHPCS
