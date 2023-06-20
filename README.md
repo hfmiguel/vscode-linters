@@ -6,7 +6,9 @@ sudo su
 
 ### aptitude its not mandatory. if you dont want to install,  change all ocurrency of aptitude for apt-get ( or just apt )
 
-apt-get update && apt-get install aptitude && aptitude install build-essential -y && aptitude install ssh wget ca-certificates git unzip curl
+apt-get update && apt-get install aptitude -y
+aptitude install build-essential -y
+aptitude install ssh wget ca-certificates git unzip curl -y
 
 ### PHP installation 
 
@@ -15,9 +17,22 @@ sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gp
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
 aptitude update -y
 aptitude install -y php8.2
-aptitude install -y php-intl php-mysql php-sqlite3 php-gd php-cli php-common php-zip php-curl php-xml php-bcmath php-xdebug php-soap php-pocv php-apcu php-redis php-memcached 
+aptitude install -y php-intl php-mysql php-sqlite3 php-gd php-cli php-common php-zip php-curl php-xml php-bcmath php-xdebug php-soap php-pocv php-apcu php-redis php-memcached
 
-### COMPOSER 
+Testing :
+
+Type php -v into your terminal to see the output.
+
+```
+PHP 8.2.7 (cli) (built: Jun  9 2023 07:37:35) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.2.7, Copyright (c) Zend Technologies
+    with Zend OPcache v8.2.7, Copyright (c), by Zend Technologies
+    with Xdebug v3.2.1, Copyright (c) 2002-2023, by Derick Rethans
+```
+
+
+### COMPOSER installation
 cd ~
 curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
 HASH=`curl -sS https://composer.github.io/installer.sig`
