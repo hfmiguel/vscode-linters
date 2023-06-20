@@ -74,6 +74,8 @@ phpcs --config-set default_standard /home/$USER/phpcs.xml
 
 - dont forget to update your VSCODE path 
 
+-----
+
 ### VS CODE Settings
 
 - Type into your VSCODE CTRL + SHIFT + P and type:  settings.json
@@ -83,6 +85,9 @@ phpcs --config-set default_standard /home/$USER/phpcs.xml
 
 - Why ? Because some config not work if you put into your User Settings ( settings that are sync with your github/microsoft account )
 - After open your settings , copy the settings.json content to your
+
+- After copy , change all occurrences of *felix* from the settings and change to your username
+
 
 ![Alt text](image.png)
 
