@@ -31,13 +31,16 @@ aptitude install nodejs -y
 ### PHP CS ( NON ROOT )
 ```
 composer global require squizlabs/php_codesniffer --dev
-composer global require phpcompatibility/php-compatibility --dev
-composer global require dealerdirect/phpcodesniffer-composer-installer --dev
+
+- After  , go to your composer instalinstallation folder
+ - probprobably will be : /home/$USER/.config/composer/
+ - Copy the content of composer.json to your composer.json and run *composer install*
 
 
 ### Create a shortcut to phpcs to run from anywhere in cli
 sudo ln -s /home/$USER/.config/composer/vendor/squizlabs/php_codesniffer/bin/phpcs /usr/local/bin/phpcs
 sudo ln -s /home/$USER/.config/composer/vendor/squizlabs/php_codesniffer/bin/phpcbf /usr/local/bin/phpcbf
+
 phpcs --config-set php_path /usr/bin/php
 phpcs --config-set default_standard PSR12
 phpcs --config-set severity 1
@@ -49,8 +52,13 @@ phpcs --config-show   ### show configs
 
 ### CUSTOM PHPCS RULES
 - create a file into a safe place, ex: /home/$USER/phpcs.xml
+- Run into terminal
+```
+touch /home/$USER/phpcs.xml
+```
 
 ```
+Example of file 
 <?xml version="1.0"?>
 <ruleset name="Custom ruleset">
     <description>My rules for PHP CodeSniffer</description>
@@ -62,6 +70,8 @@ phpcs --config-show   ### show configs
 
 phpcs --config-set default_standard /home/$USER/phpcs.xml
 ```
+- Copy the phpcs.xml to your local file.
+
 - dont forget to update your VSCODE path 
 
 ### USING PHPCS

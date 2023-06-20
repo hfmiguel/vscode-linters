@@ -1,14 +1,16 @@
 {
     /** EXECUTABLES */
+    "intelephense.environment.phpVersion": "8.2.6",
     "php.validate.executablePath": "/usr/bin/php",
     "phpcs.executablePath": "/usr/local/bin/phpcs",
     "phpSniffer.executablesFolder": "/home/felix/.config/composer/vendor/squizlabs/php_codesniffer/bin",
-    "intelephense.environment.phpVersion": "8.2.6",
     "prettier.prettierPath": "/usr/lib/node_modules/prettier",
+    "phpcs.composerJsonPath": "${workspaceFolder}/composer.json",
+    "composer.workingPath": "${workspaceFolder}",
     /*** PHP */
     "php.validate.enable": true,
-    "php.validate.run": "onSave",
-    // "php.suggest.basic": false,
+    "php.validate.run": "onType",
+    "php.suggest.basic": false,
     /*** PHP */
     /** FORMAT RULES */
     "phpSniffer.standard": "/home/felix/phpcs.xml",
@@ -26,8 +28,12 @@
     "phpcs.errorSeverity": 1,
     "phpcs.warningSeverity": 1,
     "phpcs.showSources": true,
-    "phpcs.composerJsonPath": "composer.json",
     "phpSniffer.run": "onSave",
+    "phpcs.ignorePatterns": [
+		"*/node_modules/*",
+		"*/dist/*",
+		"*/vendor/*",
+	],
     /** PHP CS */
 
     /** INTELEPHENSE */
@@ -43,8 +49,6 @@
         "${workspaceFolder}/app/Models",
         "${workspaceFolder}/vendor",
         "${workspaceFolder}/vendor/laravel",
-        "**/vendor/**",
-        "**/Models/**",
     ],
     "intelephense.files.exclude": [
         "**/.git/**",
