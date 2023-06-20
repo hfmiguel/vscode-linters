@@ -9,9 +9,11 @@ sudo su
 apt-get update && apt-get install aptitude -y
 aptitude install build-essential -y
 aptitude install ssh wget ca-certificates git unzip curl -y
+```
 
 ### PHP installation 
 
+```
 aptitude install lsb-release apt-transport-https ca-certificates
 sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
@@ -23,7 +25,7 @@ Testing :
 
 Type php -v into your terminal to see the output.
 
-```
+
 PHP 8.2.7 (cli) (built: Jun  9 2023 07:37:35) (NTS)
 Copyright (c) The PHP Group
 Zend Engine v4.2.7, Copyright (c) Zend Technologies
@@ -33,6 +35,8 @@ Zend Engine v4.2.7, Copyright (c) Zend Technologies
 
 
 ### COMPOSER installation
+
+```
 cd ~
 curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
 HASH=`curl -sS https://composer.github.io/installer.sig`
@@ -41,6 +45,7 @@ php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 ```
 
 ### NODE ( root ) 
+
 ```
 sudo su
 
@@ -51,6 +56,7 @@ aptitude install nodejs -y
 ```
 
 ### PHP CS ( NON ROOT )
+
 ```
 composer global require squizlabs/php_codesniffer --dev
 
@@ -92,8 +98,8 @@ Example of file
 
 phpcs --config-set default_standard /home/$USER/phpcs.xml
 ```
-- Copy the phpcs.xml to your local file.
 
+- Copy the phpcs.xml to your local file.
 - dont forget to update your VSCODE path 
 
 -----
