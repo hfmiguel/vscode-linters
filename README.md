@@ -1,9 +1,14 @@
-### WSL First steps.
+### WSL First steps (  root user ) 
 
 ```
+## login as root
+sudo su
+
+### aptitude its not mandatory. if you dont want to install,  change all ocurrency of aptitude for apt-get ( or just apt )
+
 apt-get update && apt-get install aptitude && aptitude install build-essential -y && aptitude install ssh wget ca-certificates git unzip curl
 
-### PHP
+### PHP installation 
 
 aptitude install lsb-release apt-transport-https ca-certificates
 sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
