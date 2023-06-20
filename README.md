@@ -32,8 +32,8 @@ aptitude install nodejs -y
 ```
 composer global require squizlabs/php_codesniffer --dev
 
-- After  , go to your composer instalinstallation folder
- - probprobably will be : /home/$USER/.config/composer/
+- After  , go to your composer installation folder
+ - probably will be : /home/$USER/.config/composer/
  - Copy the content of composer.json to your composer.json and run *composer install*
 
 
@@ -73,6 +73,19 @@ phpcs --config-set default_standard /home/$USER/phpcs.xml
 - Copy the phpcs.xml to your local file.
 
 - dont forget to update your VSCODE path 
+
+### VS CODE Settings
+
+- Type into your VSCODE CTRL + SHIFT + P and type:  settings.json
+  - Click to open Remote settings ( WSL + YourWslDistroName )
+  - Or 
+  - Click to open : Workspace Settings
+
+- Why ? Because some config not work if you put into your User Settings ( settings that are sync with your github/microsoft account )
+
+- After open your settings , copy the settings.json content to your.
+
+
 
 ### USING PHPCS
 ```
