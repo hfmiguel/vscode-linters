@@ -104,6 +104,13 @@ phpcs --config-set default_standard /home/$USER/phpcs.xml
 
 -----
 
+
+### PHPSTAN 
+1. Install
+    composer global require --dev phpstan/phpstan
+2. Create the symbolic link
+    sudo ln -s /home/$USER/.config/composer/vendor/bin/phpstan /usr/local/bin/phpstan
+
 ### VS CODE Settings
 
 - Type into your VSCODE CTRL + SHIFT + P and type:  settings.json
