@@ -11,7 +11,10 @@
         "barryvdh/laravel-ide-helper": "^2.12",
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
         "wp-coding-standards/wpcs": "^2.3",
-        "slevomat/coding-standard": "^8.12"
+        "slevomat/coding-standard": "^8.12",
+        "phpstan/phpstan": "^1.10",
+        "nunomaduro/larastan": "^2.0",
+        "nunomaduro/phpinsights": "^2.9"
     },
     "config": {
         "allow-plugins": {

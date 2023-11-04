@@ -7,19 +7,20 @@ sudo su
 ### aptitude its not mandatory. if you dont want to install,  change all ocurrency of aptitude for apt-get ( or just apt )
 
 apt-get update && apt-get install aptitude -y
-aptitude install build-essential -y
-aptitude install ssh wget ca-certificates git unzip curl -y
+
+sudo aptitude install build-essential -y
+sudo aptitude install ssh wget ca-certificates git unzip curl -y
 ```
 
-### PHP installation 
+### PHP installation  (  root user ) 
 
 ```
-aptitude install lsb-release apt-transport-https ca-certificates
+sudo aptitude install lsb-release apt-transport-https ca-certificates
 sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
-aptitude update -y
-aptitude install -y php8.2
-aptitude install -y php-intl php-mysql php-sqlite3 php-gd php-cli php-common php-zip php-curl php-xml php-bcmath php-xdebug php-soap php-pocv php-apcu php-redis php-memcached
+sudo aptitude update -y
+sudo aptitude install -y php8.2
+sudo aptitude install -y php-intl php-mysql php-sqlite3 php-gd php-cli php-common php-zip php-curl php-xml php-bcmath php-xdebug php-soap php-apcu php-redis php-memcached  php-mbstring
 
 Testing :
 
@@ -55,7 +56,13 @@ aptitude update &&
 aptitude install nodejs -y
 ```
 
-### PHP CS ( NON ROOT )
+-------------------
+-------------------
+
+## LINTERS
+
+
+### PHP Codesniffer ( NON ROOT )
 
 ```
 composer global require squizlabs/php_codesniffer --dev
@@ -76,58 +83,50 @@ phpcs --config-set colors 1
 phpcs --config-set installed_paths /home/$USER/.config/composer/vendor/phpcompatibility/php-compatibility,/home/felix/.config/composer/vendor/dealerdirect/phpcodesniffer-composer-installer/src
 
 phpcs --config-show   ### show configs
+
 ```
 
-### CUSTOM PHPCS RULES
-- create a file into a safe place, ex: /home/$USER/phpcs.xml
+### PHP CS/CBF RULES
 - Run into terminal
 ```
 touch /home/$USER/phpcs.xml
 ```
-
-```
-Example of file 
-<?xml version="1.0"?>
-<ruleset name="Custom ruleset">
-    <description>My rules for PHP CodeSniffer</description>
-    <rule ref="PHPCompatibility"/>
-    <rule ref="PSR2"/>
-</ruleset>
-
-- And change your phpcs rule
-
-phpcs --config-set default_standard /home/$USER/phpcs.xml
-```
-
 - Copy the phpcs.xml to your local file.
-- dont forget to update your VSCODE path 
+- dont forget to update your VSCODE path
+- Update the PHPCS config path
 
------
+```
+phpcs --config-set default_standard /home/$USER/phpcs.xml 
+```
 
+------------------------ 
+------------------------ 
 
-### PHPSTAN 
+### PHP STAN 
 1. Install
-    composer global require --dev phpstan/phpstan
+    - composer global require --dev phpstan/phpstan
 2. Create the symbolic link
-    sudo ln -s /home/$USER/.config/composer/vendor/bin/phpstan /usr/local/bin/phpstan
+    - sudo ln -s /home/$USER/.config/composer/vendor/bin/phpstan /usr/local/bin/phpstan
+3. Run: 
 
-### VS CODE Settings
-
-- Type into your VSCODE CTRL + SHIFT + P and type:  settings.json
-  - Click to open Remote settings ( WSL + YourWslDistroName )
-  - Or 
-  - Click to open : Workspace Settings
-
-- Why ? Because some config not work if you put into your User Settings ( settings that are sync with your github/microsoft account )
-- After open your settings , copy the settings.json content to your
-
-- After copy , change all occurrences of *felix* from the settings and change to your username
+```
+phpstan analyse -l 9 --error-format=table path/to/folder
+```
 
 
-![Alt text](image.png)
+### PHP INSIGHTS
+1. Install
+ - composer require nunomaduro/phpinsights --dev
+2. Create the symbolic link
+ - sudo ln -s /home/felix/.config/composer/vendor/bin/phpinsights /usr/local/bin/phpinsights
+3. Run
+```
+phpinsights analyse -v app/ --fix
+```
 
-------
 
+------------------------ 
+------------------------ 
 
 ### USING PHPCS
 ```
@@ -135,7 +134,7 @@ phpcs -p You/Folder  or Your/Folder/File.php
 
 Example: 
 
-phpcs /home/YourUser/projetos/projectTest/app/Enums/Example.php -p -v
+phpcs -p -v -w /home/YourUser/project/
 
 ### Output
 
@@ -166,7 +165,7 @@ Time: 91ms; Memory: 10MB
 
 And , to fix .
 
-phpcbf /home/YourUser/projetos/projectTest/app/Enums/Example.php -p -v
+phpcbf -p -v -w /home/YourUser/project/
 
 
 ### Output
@@ -187,6 +186,8 @@ Time: 114ms; Memory: 10MB
 
 ```
 
+------------------------ 
+------------------------ 
 
 ### JS LINTERS ( ROOT )
 ```
@@ -202,6 +203,29 @@ git config pull.rebase false
 git config user.name "Your Username"
 git config user.email "Your git email "
 ```
+
+------------------------ 
+------------------------ 
+
+
+### VS CODE Settings
+
+- Type into your VSCODE CTRL + SHIFT + P and type:  settings.json
+  - Click to open Remote settings ( WSL + YourWslDistroName )
+  - Or 
+  - Click to open : Workspace Settings
+
+- Why ? Because some config not work if you put into your User Settings ( settings that are sync with your github/microsoft account )
+- After open your settings , copy the settings.json content to your
+
+- After copy , change all occurrences of "felix" from the settings and change to your username
+
+
+![Alt text](image.png)
+
+
+------------------------ 
+------------------------ 
 
 
 ### EXTENSIONS 
