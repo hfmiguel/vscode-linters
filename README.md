@@ -254,6 +254,15 @@ Link do Marketplace do VS: https://marketplace.visualstudio.com/items?itemName=w
 ```
 
 ```
+Nome: phpstan
+ID: SanderRonde.phpstan-vscode
+Descrição: PHPStan language server and inline error provider
+Versão: 2.2.26
+Editor: SanderRonde
+Link do Marketplace do VS: https://marketplace.visualstudio.com/items?itemName=SanderRonde.phpstan-vscode
+```
+
+```
 Nome: ESLint
 ID: dbaeumer.vscode-eslint
 Descrição: Integrates ESLint JavaScript into VS Code.

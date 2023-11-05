@@ -34,6 +34,10 @@
         <exclude-pattern>*.phtml</exclude-pattern>
     </rule>
 
+    <rule ref="PSR12.Functions.ReturnTypeDeclaration">
+        <severity>error</severity>
+    </rule>
+
     <rule ref="PSR2.Methods.MethodDeclaration.Underscore">
         <type>error</type>
     </rule>

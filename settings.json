@@ -4,7 +4,6 @@
     "php.validate.executablePath": "/usr/bin/php",
     "phpcs.executablePath": "/usr/local/bin/phpcs",
     "phpSniffer.executablesFolder": "/home/felix/.config/composer/vendor/squizlabs/php_codesniffer/bin",
-    "prettier.prettierPath": "/usr/lib/node_modules/prettier",
     "phpcs.composerJsonPath": "${workspaceFolder}/composer.json",
     "composer.workingPath": "${workspaceFolder}",
     /*** PHP */
@@ -23,19 +22,19 @@
     "phpcs.lintOnSave": true,
     "phpcs.lintOnOpen": true,
     "phpcs.lintOnType": false,
-    "phpcs.autoConfigSearch": true,
+    /** if has problem , set to true */
+    "phpcs.autoConfigSearch": false,
     "phpcs.showWarnings": true,
     "phpcs.errorSeverity": 1,
     "phpcs.warningSeverity": 1,
     "phpcs.showSources": true,
     "phpSniffer.run": "onSave",
     "phpcs.ignorePatterns": [
-		"*/node_modules/*",
-		"*/dist/*",
-		"*/vendor/*",
-	],
+        "*/node_modules/*",
+        "*/dist/*",
+        "*/vendor/*",
+    ],
     /** PHP CS */
-
     /** INTELEPHENSE */
     "intelephense.files.associations": [
         "*.php",
@@ -48,6 +47,7 @@
         "${workspaceFolder}/app",
         "${workspaceFolder}/app/Models",
         "${workspaceFolder}/vendor",
+        "${workspaceFolder}/vendor/*",
         "${workspaceFolder}/vendor/laravel",
     ],
     "intelephense.files.exclude": [
@@ -84,13 +84,26 @@
     "intelephense.diagnostics.undefinedProperties": false,
     "intelephense.diagnostics.undefinedClassConstants": true,
     /** INTELEPHENSE */
+
+    /** PHPSTAN */
+    "phpstan.binPath": "/usr/local/bin/phpstan",
+    "phpstan.executablePath": "/usr/local/bin/phpstan",
+    "phpstan.configFile": "/home/felix/phpstan.neon",
+    "phpstan.showProgress": true,
+    "phpstan.binCommand": [
+        "phpstan"
+    ],
+    "phpstan.memoryLimit": "5G",
+    "phpstan.enabled": true,
+    /** PHPSTAN */
     /***  PRETTIER */
-    "prettier.enableDebugLogs": true,
-    "prettier.resolveGlobalModules": true,
     "eslint.timeBudget.onValidation": {
         "warning": 500,
         "error": 1000
     },
+    "prettier.configPath": "~/.prettierrc",
+    "prettier.prettierPath": "/usr/lib/node_modules/prettier/bin-prettier.js",
+    "prettier.enableDebugLogs": true,
     "prettier.printWidth": 80,
     "prettier.tabWidth": 2,
     "prettier.useTabs": true,
@@ -99,13 +112,14 @@
     "prettier.jsxSingleQuote": false,
     "prettier.trailingComma": "all",
     "prettier.bracketSpacing": true,
-    "prettier.bracketSameLine": false,
+    "prettier.bracketSameLine": true,
     "prettier.arrowParens": "avoid",
     "prettier.requirePragma": true,
     "prettier.insertPragma": true,
-    "prettier.requireConfig": false,
     "prettier.singleAttributePerLine": true,
     "prettier.htmlWhitespaceSensitivity": "strict",
+    "prettier.resolveGlobalModules": true,
+    "prettier.withNodeModules": true,
     /** ESLINT */
     "eslint.run": "onType",
     "eslint.enable": true,
@@ -124,5 +138,11 @@
         "javascriptreact",
         "typescriptreact"
     ],
-    "eslint.probe": [ "javascript", "javascriptreact", "vue" ]
+    "eslint.probe": [
+        "javascript",
+        "javascriptreact",
+        "vue"
+    ],
+    "prettier.requireConfig": true,
+    "prettier.useEditorConfig": false
 }
