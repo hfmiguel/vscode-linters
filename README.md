@@ -1,3 +1,21 @@
+### WSL installation
+
+#### Will be installed the Debian distro
+
+1. Open your power sheel ( or Windows terminal for windows 11 ) as admin
+2. wsl --install -d Debian
+3. After install finish , you must restart your computer .
+4. After reboot , open your Debian terminal and finish the linux configuration
+  - username
+  - password
+5. Open your power sheel again , and force to use WSL 2: wsl --set-default-version 2
+6. With your WSL running  , install the Docker Desktop app for Windows.
+7. After install the docker desktop for windows  , enable your distro :
+![image](https://github.com/hfmiguel/vscode-linters/assets/14097051/41bfd5f0-fa25-453b-8417-e5f11fef0f19)
+  - After select your linux distro , click to Apply & Restart.
+
+
+
 ### WSL First steps (  root user ) 
 
 ```
@@ -58,6 +76,13 @@ aptitude install nodejs -y
 
 -------------------
 -------------------
+
+
+### SSH
+
+1. Using your normal user , execute:
+2. `ssh-keygen`
+3. This code will generate a ssh key code. Use this code in your gitlab/github account to allow to push and pull from your repositories.
 
 ## LINTERS
 
