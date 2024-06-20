@@ -1,162 +1,192 @@
 <?xml version="1.0"?>
 <ruleset name="Custom ruleset">
-    <description>My rules for PHP CodeSniffer</description>
+  <description>My rules for PHP CodeSniffer</description>
 
-    <exclude-pattern>*/tests/*</exclude-pattern>
-    <exclude-pattern>*/data/*</exclude-pattern>
+  <exclude-pattern>*/tests/*</exclude-pattern>
+  <exclude-pattern>*/data/*</exclude-pattern>
 
-    <arg name="extensions" value="php,inc,lib" />
-    <arg name="report" value="summary" />
-    <arg name="colors" />
-    <arg value="sp" />
-    <arg name="encoding" value="utf-8" />
-    <ini name="memory_limit" value="512M" />
+  <arg name="extensions" value="php,inc,lib" />
+  <arg name="report" value="summary" />
+  <arg name="colors" />
+  <arg value="sp" />
+  <arg name="encoding" value="utf-8" />
+  <ini name="memory_limit" value="512M" />
 
-    <rule ref="PSR1" />
-    <rule ref="PSR2" />
-    <rule ref="PSR12" />
-    <rule ref="PHPCompatibility" />
-
-    <rule ref="PSR2.Classes.PropertyDeclaration" />
-    <rule ref="PSR2.Methods.MethodDeclaration" />
-    <rule ref="PSR2.Files.EndFileNewline" />
-    <rule ref="PSR12.Files.OpenTag" />
-
-    <rule ref="PHPCompatibility.Variables.ForbiddenThisUseContexts.OutsideObjectContext">
-        <exclude-pattern>.*</exclude-pattern>
-    </rule>
-
-    <rule ref="PSR1.Files.SideEffects">
-        <exclude-pattern>public/index.php</exclude-pattern>
-    </rule>
-
-    <rule ref="PSR12.Files.FileHeader">
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
-    <rule ref="PSR12.Functions.ReturnTypeDeclaration">
-        <severity>error</severity>
-    </rule>
-
-    <rule ref="PSR2.Methods.MethodDeclaration.Underscore">
-        <type>error</type>
-    </rule>
-
-    <rule ref="Generic.PHP.Syntax" />
-    <rule ref="Generic.PHP.DeprecatedFunctions" />
-    <rule ref="Generic.PHP.LowerCaseKeyword" />
-    <rule ref="Generic.Strings.UnnecessaryStringConcat" />
+  <rule ref="PSR1" />
+  <rule ref="PSR2" />
+  <rule ref="PSR12" />
+  <rule ref="PHPCompatibility" />
+  <!-- <rule ref="PEAR" /> -->
 
 
-    <!-- view files adjustments -->
-    <rule ref="Generic.Files.LineLength">
-        <properties>
-            <property name="lineLimit" value="120" />
-            <property name="absoluteLineLimit" value="130" />
-        </properties>
-    </rule>
+  <rule ref="PSR2.Classes.PropertyDeclaration" />
+  <rule ref="PSR2.Methods.MethodDeclaration" />
+  <rule ref="PSR2.Files.EndFileNewline" />
+  <rule ref="PSR12.Files.OpenTag" />
 
-    <rule ref="Generic.Files.LineLength.MaxExceeded">
-        <message>Line contains %2$s chars, which is more than the limit of %1$s</message>
-    </rule>
+  <rule ref="PHPCompatibility.Variables.ForbiddenThisUseContexts.OutsideObjectContext">
+    <exclude-pattern>.*</exclude-pattern>
+  </rule>
 
-    <rule ref="Generic.Files.LineLength.TooLong">
-        <message>Line longer than %s characters; contains %s characters</message>
-    </rule>
+  <rule ref="PSR1.Files.SideEffects">
+    <exclude-pattern>public/index.php</exclude-pattern>
+  </rule>
 
-    <rule ref="Generic.PHP.ForbiddenFunctions">
-        <properties>
-            <property name="forbiddenFunctions" type="array">
-                <element key="sizeof" value="count" />
-                <element key="delete" value="unset" />
-                <element key="print" value="echo" />
-                <element key="is_null" value="null" />
-                <element key="create_function" value="null" />
-            </property>
-        </properties>
-    </rule>
+  <rule ref="PSR12.Files.FileHeader">
+    <exclude-pattern>*.phtml</exclude-pattern>
+  </rule>
 
-    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter">
-        <properties>
-            <property name="exclude" type="array" value="setUp,tearDown" />
-        </properties>
-    </rule>
+  <rule ref="PSR12.Functions.ReturnTypeDeclaration">
+    <severity>error</severity>
+  </rule>
 
-    <rule ref="Generic.WhiteSpace.ScopeIndent">
-        <properties>
-            <property name="ignoreIndentationTokens" type="array">
-                <element value="T_COMMENT" />
-                <element value="T_DOC_COMMENT_OPEN_TAG" />
-                <element value="T_OPEN_TAG" />
-            </property>
-        </properties>
-    </rule>
+  <rule ref="PSR2.Methods.MethodDeclaration.Underscore">
+    <type>error</type>
+  </rule>
 
-    <rule ref="Generic.Metrics.NestingLevel">
-        <properties>
-            <property name="maxNestingLevel" value="3" />
-            <property name="message"
-                value="O nível de aninhamento é muito alto. O máximo permitido é 3." />
-        </properties>
-    </rule>
+  <!-- GENERIC -->
+  <!-- GENERIC -->
+  <!-- GENERIC -->
+  <rule ref="Generic.PHP.Syntax" />
+  <rule ref="Generic.PHP.DeprecatedFunctions" />
+  <rule ref="Generic.PHP.LowerCaseKeyword" />
+  <rule ref="Generic.Strings.UnnecessaryStringConcat" />
 
-    <rule ref="Squiz.NamingConventions.ValidVariableName.NotCamelCaps" />
+  <rule ref="Generic.Classes.DuplicateClassName" />
+  <rule ref="Generic.CodeAnalysis.EmptyStatement" />
+  <rule ref="Generic.Debug.ClosureLinter" />
+  <rule ref="Generic.Debug.JSHint" />
+  <rule ref="Generic.Debug.CSSLint" />
+  <rule ref="Generic.NamingConventions.ConstructorName" />
 
-    <rule ref="Squiz.Commenting.FunctionComment.Missing">
-        <exclude-pattern>*/vendor/*</exclude-pattern>
-    </rule>
+  <rule ref="Generic.Metrics.CyclomaticComplexity">
+    <properties>
+      <property name="complexity" value="20" />
+      <property name="absoluteComplexity" value="30" />
+    </properties>
+  </rule>
 
-    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
-        <properties>
-            <property name="ignoreBlankLines" value="false" />
-        </properties>
-    </rule>
+  <!-- view files adjustments -->
+  <rule ref="Generic.Files.LineLength">
+    <properties>
+      <property name="lineLimit" value="120" />
+      <property name="absoluteLineLimit" value="130" />
+    </properties>
+  </rule>
 
-    <rule ref="Squiz.WhiteSpace.OperatorSpacing">
-        <properties>
-            <property name="ignoreNewlines" value="true" />
-            <property name="ignoreAdjacent" value="true" />
-            <property name="operators" type="array">
-                <element value="=" />
-                <element value="==" />
-                <element value="===" />
-                <element value="!=" />
-                <element value="!==" />
-                <element value=">" />
-                <element value=">=" />
-                <element value="&lt;" />
-                <element value="&lt;=" />
-                <element value="+" />
-                <element value="-" />
-                <element value="*" />
-                <element value="/" />
-                <element value="%" />
-                <element value="." />
-                <element value="**" />
-                <element value="??" />
-                <element value="instanceof" />
-            </property>
-        </properties>
-    </rule>
+  <rule ref="Generic.Files.LineLength.MaxExceeded">
+    <message>Line contains %2$s chars, which is more than the limit of %1$s</message>
+  </rule>
 
-    <rule ref="Squiz.Operators.ValidLogicalOperators">
-        <properties>
-            <property name="allowAnd" value="false" />
-            <property name="allowOr" value="false" />
-        </properties>
-    </rule>
+  <rule ref="Generic.Files.LineLength.TooLong">
+    <message>Line longer than %s characters; contains %s characters</message>
+  </rule>
 
-    <rule ref="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming">
-        <properties>
-            <property name="maxDepthOfInheritance" value="3" />
-        </properties>
-    </rule>
+  <rule ref="Generic.PHP.ForbiddenFunctions">
+    <properties>
+      <property name="forbiddenFunctions" type="array">
+        <element key="sizeof" value="count" />
+        <element key="delete" value="unset" />
+        <element key="print" value="echo" />
+        <!-- <element key="is_null" value="null" /> -->
+        <element key="create_function" value="null" />
+      </property>
+    </properties>
+  </rule>
 
-    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison" />
-    <!-- <rule ref="SlevomatCodingStandard.ControlStructures.DisallowShortTernaryOperator" /> -->
-    <!-- <rule ref="SlevomatCodingStandard.ControlStructures.RequireTernaryOperator" /> -->
-    <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator" />
-    <rule ref="SlevomatCodingStandard.ControlStructures.RequireShortTernaryOperator" />
-    <rule ref="SlevomatCodingStandard.ControlStructures.RequireMultiLineTernaryOperator" />
+  <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter" />
+  <rule ref="Generic.Commenting.Todo" />
+  <rule ref="Generic.ControlStructures.InlineControlStructure" />
 
+  <rule ref="Generic.WhiteSpace.ScopeIndent">
+    <properties>
+      <property name="ignoreIndentationTokens" type="array">
+        <element value="T_COMMENT" />
+        <element value="T_DOC_COMMENT_OPEN_TAG" />
+        <element value="T_OPEN_TAG" />
+      </property>
+    </properties>
+  </rule>
+
+  <rule ref="Generic.Metrics.NestingLevel">
+    <properties>
+      <property name="maxNestingLevel" value="3" />
+      <property name="message"
+        value="O nível de aninhamento é muito alto. O máximo permitido é 3." />
+    </properties>
+  </rule>
+
+
+  <!-- Squiz -->
+  <!-- Squiz -->
+  <!-- Squiz -->
+  <rule ref="Squiz.NamingConventions.ValidVariableName.NotCamelCaps" />
+  <rule ref="Squiz.Scope.MethodScope" />
+  <rule ref="Squiz.Scope.StaticThisUsage" />
+
+  <rule ref="Squiz.Commenting.FunctionComment.Missing">
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+  </rule>
+
+  <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
+    <properties>
+      <property name="ignoreBlankLines" value="false" />
+    </properties>
+  </rule>
+
+  <rule ref="Squiz.WhiteSpace.OperatorSpacing">
+    <properties>
+      <property name="ignoreNewlines" value="true" />
+      <property name="ignoreAdjacent" value="true" />
+      <property name="operators" type="array">
+        <element value="=" />
+        <element value="==" />
+        <element value="===" />
+        <element value="!=" />
+        <element value="!==" />
+        <element value=">" />
+        <element value=">=" />
+        <element value="&lt;" />
+        <element value="&lt;=" />
+        <element value="+" />
+        <element value="-" />
+        <element value="*" />
+        <element value="/" />
+        <element value="%" />
+        <element value="." />
+        <element value="**" />
+        <element value="??" />
+        <element value="instanceof" />
+      </property>
+    </properties>
+  </rule>
+
+  <rule ref="Squiz.Operators.ValidLogicalOperators">
+    <properties>
+      <property name="allowAnd" value="false" />
+      <property name="allowOr" value="false" />
+    </properties>
+  </rule>
+
+  <!-- SlevomatCodingStandard -->
+  <!-- SlevomatCodingStandard -->
+  <!-- SlevomatCodingStandard -->
+  <rule ref="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming">
+    <properties>
+      <property name="maxDepthOfInheritance" value="3" />
+    </properties>
+  </rule>
+
+  <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison" />
+  <!-- <rule ref="SlevomatCodingStandard.ControlStructures.DisallowShortTernaryOperator" /> -->
+  <!-- <rule ref="SlevomatCodingStandard.ControlStructures.RequireTernaryOperator" /> -->
+  <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator" />
+  <rule ref="SlevomatCodingStandard.ControlStructures.RequireShortTernaryOperator" />
+  <rule ref="SlevomatCodingStandard.ControlStructures.RequireMultiLineTernaryOperator" />
+
+
+  <!-- Zend -->
+  <!-- Zend -->
+  <!-- Zend -->
+  <rule ref="Zend.Debug.CodeAnalyzer" />
 </ruleset>

@@ -1,81 +1,60 @@
+includes:
+    - /home/felix/.config/composer/vendor/larastan/larastan/extension.neon
+    - phar://phpstan.phar/conf/bleedingEdge.neon
+
+
 parameters:
   level: 6
-  phpVersion: 80200
+  phpVersion: 80299
+  disableMigrationScan: true
+  disableSchemaScan: true
+  checkModelProperties: true
+  noModelMake: false
+  noUnnecessaryCollectionCallOnly: ['count', 'first']
+  checkUnusedViews: true
+  tmpDir: tmp
+  checkMissingIterableValueType: true
   paths:
-    - app
-    - config
+    - app/
+    - tests/
+    - config/
+    - database/
   excludePaths:
-    - database
     - storage
-    - tests
+    - vendor
+    - node_modules
+    - public
     - *.blade.php
   fileExtensions:
     - php
     - module
     - inc
   ignoreErrors:
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::find\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::create\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::first\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::with\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::where\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::whereNotNull\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::whereNull\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::orderBy\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::orderByDesc\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::limit\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::offset\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::get\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::all\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::count\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::delete\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::update\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::increment\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::decrement\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::firstOrFail\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::findOrFail\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::findOrNew\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::update\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::updateOrCreate\(\)#'
-    - '#Call to an undefined static method [a-zA-Z0-9\\_]+::firstOrCreate\(\)#'
-    - '#Call to an undefined method#'
-    - '#Cannot access property#'
+    - '#Call to an undefined method Illuminate\\Support\\HigherOrder#'
+    - '#Call to an undefined method [a-zA-Z0-9\\_]+::assignUsers()#'
+    - '#Call to an undefined method [a-zA-Z0-9\\_]+::availableUsers()#'
+    - '#Property [a-zA-Z0-9\\_]+::\$listeners has no type specified#'
+    - '#Property [a-zA-Z0-9\\_]+::\$searchable has no type specified#'
+    - '#Property [a-zA-Z0-9\\_]+::\$rules has no type specified#'
+    - '#Property [a-zA-Z0-9\\_]+::\$messages has no type specified#'
+    - '#\$groupBy of method [a-zA-Z0-9\\_]+::groupBy() expects array#'
+    - '#Method [a-zA-Z0-9\\_]+::apply() #'
+    - '#return type with generic class [a-zA-Z0-9\\_]+Attribute does not specify its types: TGet, TSet#'
+    - '#Unable to resolve the template type TKey in call to function collect#'
+    - '#in call to function collect#'
+    - '#Unable to resolve the template type TKey in call to function collect#'
+    - '#Unable to resolve the template type TValue in call to function collect#'
+    - '#Method [a-zA-Z0-9\\_]+::getResourceProperty() return type with generic class#'
+    - '#Method [a-zA-Z0-9\\_]+::getSearchableColumns() return type with generic class#'
+    - '#return type with generic class Illuminate\\Pagination\\LengthAwarePaginator does not specify its types#'
+    - '#return type with generic class Illuminate\\Pagination\\Paginator does not specify its types#'
+    - '#has parameter \$query with generic class Illuminate\\Database\\Eloquent\\Builder but does not specify its types: TModelClass#'
+    - '#return type with generic class Illuminate\\Database\\Eloquent\\Builder does not specify its types: TModelClass#'
+    - '#return type with generic class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo does not specify its types: TRelatedModel, TChildModel#'
+    - '#Call to an undefined method [a-zA-Z0-9\\_]+::goToPage()#'
+    - '#Access to an undefined property [a-zA-Z0-9\\_]+::\$globalFilters#'
   parallel:
     jobSize: 20
     maximumNumberOfProcesses: 32
-    minimumNumberOfJobsPerProcess: 12
-  universalObjectCratesClasses:
-    - Illuminate\Http\Request
-    - Illuminate\Support\Optional
-  earlyTerminatingFunctionCalls:
-    - abort
-    - dd
-  mixinExcludeClasses:
-    - Eloquent
-  checkOctaneCompatibility: false
-  noModelMake: true
-  noUnnecessaryCollectionCall: true
-  noUnnecessaryCollectionCallOnly: []
-  noUnnecessaryCollectionCallExcept: []
-  squashedMigrationsPath: []
-  databaseMigrationsPath: []
-  disableMigrationScan: false
-  disableSchemaScan: false
-  viewDirectories: []
-  checkModelProperties: false
-  checkPhpDocMissingReturn: false
-  checkUnusedViews: false
-
-parametersSchema:
-    checkOctaneCompatibility: bool()
-    noModelMake: bool()
-    noUnnecessaryCollectionCall: bool()
-    noUnnecessaryCollectionCallOnly: listOf(string())
-    noUnnecessaryCollectionCallExcept: listOf(string())
-    databaseMigrationsPath: listOf(string())
-    disableMigrationScan: bool()
-    viewDirectories: listOf(string())
-    squashedMigrationsPath: listOf(string())
-    disableSchemaScan: bool()
-    checkModelProperties: bool()
-    checkUnusedViews: bool()
+    minimumNumberOfJobsPerProcess: 2
+    processTimeout: 1000.0
