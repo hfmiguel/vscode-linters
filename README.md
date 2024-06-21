@@ -32,25 +32,52 @@ sudo aptitude install ssh wget ca-certificates git unzip curl -y
 
 ### PHP installation  (  root user ) 
 
+#### Debian
 ```
 sudo aptitude install lsb-release apt-transport-https ca-certificates
 sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
 sudo aptitude update -y
 sudo aptitude install -y php8.2
-sudo aptitude install -y php-intl php-mysql php-sqlite3 php-gd php-cli php-common php-zip php-curl php-xml php-bcmath php-xdebug php-soap php-apcu php-redis php-memcached  php-mbstring
+```
 
+#### Ubuntu
+```
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt install php8.2
+```
+
+
+#### PHP extensions
+```
+sudo aptitude install -y php-intl php-mysql php-sqlite3 php-gd php-cli php-common php-zip php-curl php-xml php-bcmath php-xdebug php-soap php-apcu php-redis php-memcached  php-mbstring
+```
+
+
+#### Check installed PHP versions
+```
+sudo update-alternatives --config php
+### If necessary , change your default php.
+```
+
+#### Check php
+```
 Testing :
 
 Type php -v into your terminal to see the output.
 
+php -v
 
+Output: 
 PHP 8.2.7 (cli) (built: Jun  9 2023 07:37:35) (NTS)
 Copyright (c) The PHP Group
 Zend Engine v4.2.7, Copyright (c) Zend Technologies
     with Zend OPcache v8.2.7, Copyright (c), by Zend Technologies
     with Xdebug v3.2.1, Copyright (c) 2002-2023, by Derick Rethans
 ```
+
 
 
 ### COMPOSER installation
