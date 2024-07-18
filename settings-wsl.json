@@ -1,0 +1,12 @@
+{
+    "intelephense.environment.phpVersion": "8.2.18",
+    "php.validate.executablePath": "/usr/bin/php",
+    "phpcs.executablePath": "/usr/local/bin/phpcs",
+    "phpcs.composerJsonPath": "${workspaceFolder}/composer.json",
+    "phpSniffer.executablesFolder": "/home/felix/.config/composer/vendor/squizlabs/php_codesniffer/bin",
+    "composer.bin": "/usr/local/bin/composer",
+    "phpstan.binPath": "/usr/local/bin/phpstan",
+    "phpstan.configFile": "phpstan.neon",
+    "phpSniffer.standard": "/home/felix/phpcs.xml",
+    "phpcs.standard": "/home/felix/phpcs.xml"
+}
