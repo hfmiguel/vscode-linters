@@ -1,359 +1,101 @@
 {
-    "composer.bin": "/usr/local/bin/composer",
-    "workbench.activityBar.iconClickBehavior": "focus",
-    "workbench.iconTheme": "material-icon-theme",
-    "terminal.integrated.fontFamily": "MesloLGS NF,Meslo,Fira Code",
-    "chat.editor.fontFamily": "MesloLGS NF",
-    "editor.fontFamily": "Fira Code, Operator Mono, Menlo, Monaco, 'Courier New', monospace",
-    "explorer.fontSize": 15,
-    "explorer.confirmDelete": true,
-    "explorer.confirmDragAndDrop": true,
-    "explorer.decorations.badges": true,
-    "explorer.compactFolders": false,
-    "debug.console.fontSize": 15,
-    "markdown.preview.fontSize": 15,
-    "editor.fontSize": 15,
-    "editor.suggestFontSize": 15,
-    "editor.lineHeight": 24.65,
-    "editor.tabSize": 4,
-    "window.zoomLevel": 0,
-    "editor.letterSpacing": 0.5,
-    "editor.suggestLineHeight": 35,
-    "editor.semanticHighlighting.enabled": true,
-    "editor.insertSpaces": true,
-    "editor.fontLigatures": true,
-    "editor.cursorBlinking": "smooth",
-    "editor.cursorStyle": "line-thin",
-    "editor.cursorWidth": 4,
-    "editor.fontWeight": "500",
-    "editor.renderWhitespace": "all",
-    "editor.snippetSuggestions": "top",
-    "editor.bracketPairColorization.enabled": true,
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.inlineSuggest.enabled": true,
-    "editor.inlineSuggest.showToolbar": "always",
-    "editor.glyphMargin": true,
-    "editor.guides.bracketPairs": true,
-    "editor.scrollbar.vertical": "hidden",
-    "editor.scrollbar.verticalScrollbarSize": 1,
-    "editor.suggestSelection": "recentlyUsedByPrefix",
-    "editor.semanticTokenColorCustomizations": { },
-    "editor.guides.bracketPairsHorizontal": true,
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "editor.accessibilitySupport": "off",
-    "editor.wordWrap": "on",
-    "editor.wordWrapColumn": 160,
-    "editor.minimap.scale": 2,
-    "editor.minimap.renderCharacters": true,
+    "LaravelExtraIntellisense.modelsPaths": [
+        "app/Models",
+        "app/Models/Entities",
+        "app/Entities",
+        "app/Entity"
+    ],
     "[Log]": {
         "editor.fontSize": 15
     },
-    "editor.rulers": [
-        { "column": 0, "color": "#5a5a5a44" }, // left boundary is 50% opaque
-        { "column": 2, "color": "#5a5a5a44" }, // tab stops are 12.5% opaque
-        { "column": 4, "color": "#008dc43f" },
-        { "column": 6, "color": "#5a5a5a44" },
-        { "column": 8, "color": "#5a5a5a44" },
-        { "column": 10, "color": "#5a5a5a44" },
-        { "column": 40, "color": "#5a5a5a44" }, // center line
-        { "column": 60, "color": "#5a5a5a44" }, // center line
-        { "column": 99, "color": "#09ff0028" }, // right rule minus one
-        { "column": 100, "color": "#ffff002f" }, // right rule
-        { "column": 120, "color": "#ff000056" }, // extra right rule
-        { "column": 130, "color": "#ff00007a" }, // extra right rule
-    ],
-    "remote.WSL.fileWatcher.polling": true, //docker
-    "remote.WSL.fileWatcher.pollingInterval": 1000, //docker
-    "indentRainbow.updateDelay": 500, // 10 makes it super fast but may cost more resources
-    "indentRainbow.errorColor": "#ff000056",
-    "indentRainbow.tabmixColor": "#ff000056",
-    "indentRainbow.indicatorStyle": "light",
-    "indentRainbow.lightIndicatorStyleLineWidth": 1,
-    "files.trimTrailingWhitespace": true,
-    "files.trimFinalNewlines": true,
-    "files.insertFinalNewline": true,
-    "explorer.fileNesting.enabled": true,
-    "explorer.fileNesting.expand": true,
-    "workbench.localHistory.enabled": true,
-    "workbench.editor.decorations.colors": true,
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.editorAssociations": {
-        "*.sql": "default"
+    "[blade]": {
+        "editor.defaultFormatter": "shufo.vscode-blade-formatter",
+        "editor.autoClosingBrackets": "always"
     },
-    "workbench.colorCustomizations": {
-        "terminal.background": "#3a3d49",
-        "terminalCursor.background": "#A5A2A2",
-        "terminalCursor.foreground": "#A5A2A2",
-        "terminal.ansiBlue": "#444343", // path color /home/felix/.....
-        "terminal.ansiBrightBlack": "#5C5855",
-        "terminal.ansiBrightBlue": "#FFF",
-        "terminal.ansiBrightCyan": "#B5E4F4",
-        "terminal.ansiBrightGreen": "#3cff00",
-        "terminal.ansiBrightMagenta": "#A16A94",
-        "terminal.ansiBrightRed": "#DB2D20",
-        "terminal.ansiBrightWhite": "#F7F7F7",
-        "terminal.ansiBrightYellow": "#FDED02",
-        "terminal.ansiCyan": "#B5E4F4",
-        "terminal.ansiGreen": "#DB2D20",
-        "terminal.ansiMagenta": "#A16A94",
-        "terminal.ansiBlack": "#ffffff",
-        "terminal.ansiRed": "#910a00", // branch name background color
-        "terminal.ansiWhite": "#ffffff", // branch text
-        "terminal.ansiYellow": "#8f8500", // branch name background color
-        "minimap.errorHighlight": "#db2c207c",
-        "minimap.warningHighlight": "#fdec026b",
-        "minimap.size": "fit",
-        "editorRuler.foreground": "#afafaf47",
-        "editorOverviewRuler.warningForeground": "#00000000",
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.editor.languageDetectionHints": {
-        "untitledEditors": true,
-        "notebookEditors": false
+    "[dockercompose]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
-    "vscode_custom_css.imports": [
-        "https://raw.githubusercontent.com/hfmiguel/vs-code-custom-css-loader/main/style.css"
-    ],
-    "vscode_custom_css.statusbar": true,
-    "todohighlight.isEnable": true,
-    "files.associations": {
-        ".sequelizerc": "javascript",
-        ".js": "javascript",
-        ".stylelintrc": "json",
-        ".prettierrc": "json",
-        "*.tsx": "typescriptreact",
-        "*.ts": "typescript",
-        "*.log.*": "log",
-        "*.log": "log",
-        "*.module": "php",
-        "*.install": "php",
-        "*.inc": "php",
-        "Dockerfile*": "dockerfile",
-        "*.yml": "yaml"
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
-    "typescript.tsserver.log": "off",
-    "material-icon-theme.activeIconPack": "nest",
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "typescript.updateImportsOnFileMove.enabled": "never",
-    "remote.SSH.remotePlatform": {
-        "OSB-LOCAL-FELIX-TG": "linux",
-        "OSB-PRODUCAO-TG": "linux",
-        "Felix-Contabo": "linux",
-        "OSB-STAGGING-TG": "linux",
-        "Wesley-Contabo": "linux",
-        "ATS-TRAVEL": "linux",
-        "Viasat-CRM": "linux",
-        "algarserra-digitalocean": "linux",
-        "Algarserra-Contabo": "linux",
-        "OSB-Macbook": "macOS",
-        "Macbook-Interno": "macOS",
-        "LuisAndre-MNIR": "linux",
-        "viasat-crm-novo": "linux"
+    "[dotenv]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
     },
-    "gitlens.views.branches.files.layout": "tree",
-    "gitlens.advanced.messages": {
-        "suppressGitVersionWarning": true
+    "[go]": {
+        "editor.defaultFormatter": "golang.go"
     },
-    "gitlens.views.formats.commits.description": "${author, }${agoOrDate} ${tips}",
-    "gitlens.views.repositories.showIncomingActivity": true,
-    "gitlens.views.repositories.files.layout": "tree",
-    "gitlens.views.repositories.includeWorkingTree": true,
-    "gitlens.views.remotes.files.layout": "tree",
-    "gitlens.views.remotes.branches.layout": "tree",
-    "gitlens.integrations.enabled": true,
-    "gitlens.ai.experimental.provider": "openai",
-    "gitlens.ai.experimental.openai.model": "gpt-4-turbo",
-    "gitlens.ai.experimental.anthropic.model": "claude-3-opus-20240229",
-    "gitlens.ai.experimental.gemini.model": "gemini-1.5-flash-latest",
-    "gitlens.heatmap.locations": [
-        "gutter",
-        "overview",
-        "line"
-    ],
-    "gitlens.outputLevel": "error",
-    "githubstatus.default": "Working",
-    "chat.editor.lineHeight": 1,
-    "chat.editor.fontSize": 14,
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": true,
-        "markdown": true,
-        "scminput": false,
-        "yaml": true,
-        "php": true,
-        "js": true,
-        "javascript": true,
-        "json": true,
-        "html": true,
-        "blade": true,
-        "blade.php": true,
-        "*.blade.php": true,
-        "css": true,
-        "scss": true,
-        "less": true,
-        "typescript": true,
-        "typescriptreact": true,
-        "javascriptreact": true,
-        "vue": true,
-        "python": true,
-        "java": true
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "files.refactoring.autoSave": true,
-    "files.exclude": {
-        "**/.DS_Store": true,
-        "**/.firebase": true,
-        "**/.hg": true,
-        "**/.svn": true,
-        "**/bower_components": true,
-        "**/CVS": true,
-        "**/node_modules": true,
-        "**/.trunk/*actions/": true,
-        "**/.trunk/*logs/": true,
-        "**/.trunk/*notifications/": true,
-        "**/.trunk/*out/": true,
-        "**/.trunk/*plugins/": true
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit",
+            "source.formatDocument": "explicit",
+            "source.fixAll": "explicit"
+        }
     },
-    "files.watcherExclude": {
-        "**/vendor": true,
-        "**/.git": true,
-        "**/.git/objects/**": true,
-        "**/.git/subtree-cache/**": true,
-        "**/node_modules/**": true,
-        "**/node_modules/*/**": true,
-        "node_modules/**": true,
-        "**/node_modules/": true,
-        "**/node_modules": true,
-        "**/vendor/**": true,
-        "vendor/**": true,
-        "/vendor/*": true,
-        "**/vendor/": true,
-        "**/bower_components": true,
-        "**/.sql": true,
-        "**/laradock/**": true,
-        "laradock/**": true,
-        "/laradock/*": true,
-        "**/.trunk/*actions/": true,
-        "**/.trunk/*logs/": true,
-        "**/.trunk/*notifications/": true,
-        "**/.trunk/*out/": true,
-        "**/.trunk/*plugins/": true
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit",
+            "source.formatDocument": "explicit"
+        }
     },
-    "git.confirmSync": true,
-    "git.enableSmartCommit": true,
-    "git.branchProtection": [
-        "main",
-        "dev",
-        "staging",
-        "production"
-    ],
-    "git.autofetch": true,
-    "git.autofetchPeriod": 180,
-    "namespaceResolver.showMessageOnStatusBar": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[nginx]": {
+        "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+    },
+    "[php]": {
+        "editor.defaultFormatter": "wongjn.php-sniffer",
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[shellscript]": {
+        "editor.defaultFormatter": "shakram02.bash-beautify"
+    },
+    "[sql]": {
+        "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit",
+            "source.formatDocument": "explicit"
+        }
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit",
+            "source.formatDocument": "explicit"
+        }
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "accessibility.underlineLinks": true,
     "artisan.php.location": "",
-    "settingsSync.ignoredSettings": [ ],
-    "window.menuBarVisibility": "visible",
-    "javascript.referencesCodeLens.enabled": true,
-    "namespaceResolver.highlightOnOpen": true,
-    "namespaceResolver.highlightOnSave": true,
-    "namespaceResolver.sortAlphabetically": true,
-    "namespaceResolver.sortNatural": true,
-    "namespaceResolver.sortOnSave": true,
-    "namespaceResolver.exclude": "**/node_modules/**", // Exclude glob pattern while finding files
-    "redhat.telemetry.enabled": true,
-    "yaml.schemas": {
-        "file:///c%3A/Users/henri/.vscode/extensions/atlassian.atlascode-2.9.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-    },
-    "markdown.preview.breaks": true,
-    "codesnap.realLineNumbers": true,
-    "codesnap.shutterAction": "copy",
-    "javascript.validate.enable": false,
-    "javascript.suggest.autoImports": true,
-    "typescript.suggest.autoImports": true,
-    "material-icon-theme.folders.theme": "specific",
-    "docker.volumes.sortBy": "Label",
-    "docker.containers.groupBy": "Compose Project Name",
-    "docker.containers.label": "ContainerName",
-    "docker.containers.description": [ "Status" ],
-    "terminal.integrated.scrollback": 10000,
-    "terminal.integrated.confirmOnExit": "always",
-    "terminal.integrated.gpuAcceleration": "on",
-    "terminal.integrated.shellIntegration.decorationsEnabled": "both",
-    "terminal.integrated.stickyScroll.enabled": false,
-    "terminal.integrated.shellIntegration.enabled": true,
-    "terminal.integrated.tabs.showActiveTerminal": "always",
-    "terminal.integrated.tabs.showActions": "always",
-    "terminal.integrated.tabs.enabled": true,
-    "terminal.integrated.tabs.enableAnimation": true,
-    "terminal.integrated.drawBoldTextInBrightColors": true,
-    "terminal.integrated.rescaleOverlappingGlyphs": true,
-    "terminal.integrated.experimentalInlineChat": true,
-    "terminal.integrated.enableVisualBell": true,
-    "terminal.integrated.mouseWheelZoom": true,
-    "terminal.integrated.fontSize": 15,
-    "terminal.integrated.suggest.enabled": true,
-    "terminal.integrated.suggest.quickSuggestions": true,
-    "terminal.integrated.suggest.suggestOnTriggerCharacters": true,
-    "terminal.integrated.minimumContrastRatio": 1,
-    "terminal.integrated.smoothScrolling": true,
-    "terminal.explorerKind": "both",
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.defaultProfile.linux": "OH-MY-ZSH",
-    "terminal.integrated.defaultProfile.windows": "GitBash",
-    "terminal.integrated.profiles.windows": {
-        "PowerShell": {
-            "source": "PowerShell",
-            "icon": "terminal-powershell"
-        },
-        "CommandPrompt": {
-            "path": [
-                "${env:windir}\\Sysnative\\cmd.exe",
-                "${env:windir}\\System32\\cmd.exe"
-            ],
-            "args": [ ],
-            "icon": "terminal-cmd"
-        },
-        "GitBash": {
-            "source": "Git Bash",
-            "path": [ "C:\\Program Files\\Git\\bin\\bash.exe" ],
-            "icon": "terminal-bash"
-        },
-        "DebianWSL": {
-            "path": "C:\\WINDOWS\\System32\\wsl.exe",
-            "args": [ "-d", "Debian" ]
-        }
-    },
-    "terminal.integrated.profiles.linux": {
-        "bash": {
-            "path": "bash",
-            "icon": "terminal-bash"
-        },
-        "OH-MY-ZSH": {
-            "path": "zsh"
-        },
-        "fish": {
-            "path": "fish"
-        },
-        "tmux": {
-            "path": "tmux",
-            "icon": "terminal-tmux"
-        },
-        "pwsh": {
-            "path": "pwsh",
-            "icon": "terminal-powershell"
-        },
-        "sh (2)": {
-            "path": "/usr/bin/sh"
-        }
-    },
-    "sync.autoDownload": true,
-    "turboConsoleLog.addSemicolonInTheEnd": true,
-    "turboConsoleLog.insertEmptyLineAfterLogMessage": true,
-    "turboConsoleLog.logType": "log",
-    "turboConsoleLog.quote": "`",
-    "docthis.authorName": "Henrique Felix",
-    "docthis.includeAuthorTag": true,
-    "docthis.includeDescriptionTag": true,
-    "docthis.inferTypesFromNames": true,
-    "docthis.returnsTag": true,
     "better-comments.highlightPlainText": true,
     "better-comments.tags": [
         {
@@ -402,190 +144,7 @@
             "italic": false
         }
     ],
-    "thunder-client.saveToWorkspace": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnPaste": false,
-    "editor.formatOnType": false,
     "blade.format.enable": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "file",
-    "editor.action.inlineSuggest.acceptNextLine": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "never"
-    },
-    "[shellscript]": {
-        "editor.defaultFormatter": "shakram02.bash-beautify"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[blade]": {
-        "editor.defaultFormatter": "shufo.vscode-blade-formatter",
-        "editor.autoClosingBrackets": "always"
-    },
-    "[php]": {
-        "editor.defaultFormatter": "wongjn.php-sniffer",
-        "files.insertFinalNewline": true,
-        "files.trimFinalNewlines": true,
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features",
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": "explicit",
-            "source.formatDocument": "explicit",
-            "source.fixAll": "explicit"
-        }
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": "explicit",
-            "source.formatDocument": "explicit"
-        }
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": "explicit",
-            "source.formatDocument": "explicit"
-        }
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": "explicit",
-            "source.formatDocument": "explicit"
-        }
-    },
-    "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[sql]": {
-        "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
-    },
-    "[dockerfile]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-    },
-    "[dockercompose]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-    },
-    "[yaml]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "[nginx]": {
-        "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
-    },
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[scss]": {
-        "editor.defaultFormatter": "vscode.css-language-features"
-    },
-    "[dotenv]": {
-        "editor.defaultFormatter": "foxundermoon.shell-format"
-    },
-    "[xml]": {
-        "editor.defaultFormatter": "redhat.vscode-xml"
-    },
-    "[markdown]": {
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-    },
-    "codemetrics.basics.ComplexityColorHigh": "#ea444d",
-    "codemetrics.basics.ComplexityLevelExtreme": 35,
-    "codemetrics.basics.ComplexityLevelHigh": 20,
-    "codemetrics.basics.ComplexityLevelNormal": 10,
-    "codemetrics.basics.DiagnosticsEnabled": true,
-    "codemetrics.basics.ComplexityColorExtreme": "#9e2e34",
-    "emmet.triggerExpansionOnTab": true,
-    "emmet.showSuggestionsAsSnippets": true,
-    "emmet.syntaxProfiles": {
-        "javascript": "jsx"
-    },
-    "emmet.includeLanguages": {
-        "javascript": "javascript",
-        "razor": "html",
-        "plaintext": "pug"
-    },
-    "LaravelExtraIntellisense.modelsPaths": [
-        "app/Models",
-        "app/Models/Entities",
-        "app/Entities",
-        "app/Entity"
-    ],
-    "nginx-conf-hint.syntax": "sublime",
-    "conventionalCommits.lineBreak": "\\n",
-    "conventionalCommits.showEditor": true,
-    "conventionalCommits.editor.keepAfterSave": true,
-    "npm.keybindingsChangedWarningShown": true,
-    "todo-tree.general.showActivityBarBadge": true,
-    "todo-tree.general.statusBar": "tags",
-    "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
-    "todo-tree.general.tags": [ "BUG", "HACK", "FIXME", "TODO", "FIX", "FEAT" ],
-    "todo-tree.filtering.excludeGlobs": [ "**/node_modules/*/**", "public/", "**/vendor/*/**", ".git" ],
-    "todo-tree.tree.showCountsInTree": true,
-    "todo-tree.regex.enableMultiLine": true,
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+\\.))\\s*(\\*?\\s*($TAGS))",
-    "solidity.defaultCompiler": "localFile",
-    "solidity.packageDefaultDependenciesDirectory": "node_modules",
-    "solidity.remappings": [ "@openzeppelin/=node_modules/@openzeppelin" ],
-    "laravelGotoController.routeListCommand": "artisan route:list --json",
-    "markdownlint.run": "onSave",
-    "json.format.keepLines": true,
-    "vscode-edge-devtools.webhintInstallNotification": true,
-    "database-client.highlightSQLBlock": true,
-    "database-client.showUser": true,
-    "database-client.showTrigger": true,
-    "database-client.showEvent": true,
-    "database-client.saveConnectionExpandedState": true,
-    "colorHelper.resident": true,
-    "colorHelper.disableShadow": true,
-    "colorHelper.disableTransparent": true,
-    "color-picker-universal.languages": [
-        "*",
-        "php",
-        "blade",
-        "cdd",
-        "css",
-        "saas",
-        ".blade.php",
-        "*.php"
-    ],
-    "database-client.escapedAllObjectName": true,
-    "database-client.reloadAfterDML": true,
-    "database-client.showFilter": true,
-    "remote.autoForwardPortsSource": "hybrid",
-    "workbench.editor.editorActionsLocation": "titleBar",
-    "editor.stickyScroll.maxLineCount": 3,
-    "editor.stickyScroll.enabled": true,
-    "editor.stickyScroll.defaultModel": "indentationModel",
-    "[go]": {
-        "editor.defaultFormatter": "golang.go"
-    },
-    "workbench.colorTheme": "Shades of Purple (Super Dark)",
-    "security.workspace.trust.untrustedFiles": "open",
-    "diffEditor.ignoreTrimWhitespace": true,
-    "semgrep.scan.jobs": 12,
-    "semgrep.path": "/home/felix/.local/bin/semgrep",
-    "semgrep.scan.pro_intrafile": true,
-    "semgrep.scan.onlyGitDirty": false,
-    "trunk.flakyTestsViewEnabled": true,
-    "trunk.repoScanViewEnabled": true,
-    "trunk.repoScanViewVisible": true,
-    "trunk.inlineDecoratorsForAllExtensions": true,
-    "trunk.inlineDecoratorsForAllExtensionsEnabled": true,
-    "trunk.numJobs": 12,
-    "trunk.showPreexistingIssues": true,
-    "snyk.advanced.autoScanOpenSourceSecurity": true,
-    "snyk.trustedFolders": [
-        "${workspaceFolder}"
-    ],
-    "quokka.compactMessageOutput": true,
     "cSpell.userWords": [
         "alpinejs",
         "autofetch",
@@ -606,84 +165,181 @@
         "semgrep",
         "wwid"
     ],
-    "phpstan.enabled": false,
-    "phpstan.showProgress": true,
-    "phpstan.timeout": 1000000,
-    "phpstan.projectTimeout": 1000000,
-    "phpstan.autoConfigSearch": true,
-    "phpstan.level": 7,
-    "phpstan.memoryLimit": "1024M",
-    "phpstan.enableLanguageServer": false,
-    /*** PHP */
-    /*** PHP */
-    /*** PHP */
-    "php.validate.enable": true,
-    "php.validate.run": "onType",
-    "php.suggest.basic": false,
-    /** PHP CS */
-    /** PHP CS */
-    /** PHP CS */
-    /** PHP CS */
-    "phpcs.enable": true,
-    "phpcs.lintOnSave": true,
-    "phpcs.lintOnOpen": true,
-    "phpcs.lintOnType": false,
-    /** if has problem , set to true */
-    "phpcs.autoConfigSearch": false,
-    "phpcs.showWarnings": true,
-    "phpcs.errorSeverity": 1,
-    "phpcs.warningSeverity": 1,
-    "phpcs.showSources": true,
-    "phpSniffer.run": "onSave",
-    "intelephense.rename.namespaceMode": "all",
-    "intelephense.environment.shortOpenTag": true,
-    "intelephense.diagnostics.enable": true,
-    "intelephense.diagnostics.run": "onSave",
-    "intelephense.diagnostics.argumentCount": true,
-    "intelephense.diagnostics.unexpectedTokens": true,
-    "intelephense.diagnostics.undefinedFunctions": false,
-    "intelephense.diagnostics.undefinedSymbols": true,
-    "intelephense.diagnostics.undefinedTypes": false,
-    "intelephense.diagnostics.undefinedMethods": false,
-    "intelephense.diagnostics.undefinedConstants": true,
-    "intelephense.diagnostics.undefinedVariables": true,
-    "intelephense.diagnostics.undefinedProperties": false,
-    "intelephense.diagnostics.undefinedClassConstants": true,
-    "intelephense.format.braces": "psr12",
-    "intelephense.maxMemory": 2048,
-    /***  PRETTIER */
-    "eslint.useESLintClass": true,
+    "chat.editor.fontFamily": "MesloLGS NF",
+    "chat.editor.fontSize": 14,
+    "chat.editor.lineHeight": 1,
+    "codemetrics.basics.ComplexityColorExtreme": "#9e2e34",
+    "codemetrics.basics.ComplexityColorHigh": "#ea444d",
+    "codemetrics.basics.ComplexityLevelExtreme": 35,
+    "codemetrics.basics.ComplexityLevelHigh": 20,
+    "codemetrics.basics.ComplexityLevelNormal": 10,
+    "codemetrics.basics.DiagnosticsEnabled": true,
+    "codesnap.realLineNumbers": true,
+    "codesnap.shutterAction": "copy",
+    "color-picker-universal.languages": [
+        "*",
+        "php",
+        "blade",
+        "cdd",
+        "css",
+        "saas",
+        ".blade.php",
+        "*.php"
+    ],
+    "colorHelper.disableShadow": true,
+    "colorHelper.disableTransparent": true,
+    "colorHelper.resident": true,
+    "composer.bin": "/usr/local/bin/composer",
+    "conventionalCommits.editor.keepAfterSave": true,
+    "conventionalCommits.lineBreak": "\\n",
+    "conventionalCommits.showEditor": true,
+    "database-client.capitalizeKeywordsWhenFormatting": true,
+    "database-client.escapedAllObjectName": true,
+    "database-client.highlightSQLBlock": true,
+    "database-client.reloadAfterDML": true,
+    "database-client.saveConnectionExpandedState": true,
+    "database-client.showEvent": true,
+    "database-client.showFilter": true,
+    "database-client.showTrigger": true,
+    "database-client.showUser": true,
+    "debug.console.fontSize": 15,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "docker.containers.description": [
+        "Status"
+    ],
+    "docker.containers.groupBy": "Compose Project Name",
+    "docker.containers.label": "ContainerName",
+    "docker.volumes.sortBy": "Label",
+    "docthis.authorName": "Henrique Felix",
+    "docthis.includeAuthorTag": true,
+    "docthis.includeDescriptionTag": true,
+    "docthis.inferTypesFromNames": true,
+    "docthis.returnsTag": true,
+    "editor.accessibilitySupport": "off",
+    "editor.action.inlineSuggest.acceptNextLine": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "never"
+    },
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorStyle": "line-thin",
+    "editor.cursorWidth": 4,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.fontFamily": "Fira Code, Operator Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "editor.fontWeight": "500",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnType": false,
+    "editor.glyphMargin": true,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairsHorizontal": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.inlineSuggest.showToolbar": "always",
+    "editor.insertSpaces": true,
+    "editor.letterSpacing": 0.5,
+    "editor.lineHeight": 24.65,
+    "editor.minimap.renderCharacters": true,
+    "editor.minimap.scale": 2,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        {
+            "column": 0,
+            "color": "#5a5a5a44"
+        },
+        {
+            "column": 2,
+            "color": "#5a5a5a44"
+        },
+        {
+            "column": 4,
+            "color": "#008dc43f"
+        },
+        {
+            "column": 6,
+            "color": "#5a5a5a44"
+        },
+        {
+            "column": 8,
+            "color": "#5a5a5a44"
+        },
+        {
+            "column": 10,
+            "color": "#5a5a5a44"
+        },
+        {
+            "column": 40,
+            "color": "#5a5a5a44"
+        },
+        {
+            "column": 60,
+            "color": "#5a5a5a44"
+        },
+        {
+            "column": 99,
+            "color": "#09ff0028"
+        },
+        {
+            "column": 100,
+            "color": "#ffff002f"
+        },
+        {
+            "column": 120,
+            "color": "#ff000056"
+        },
+        {
+            "column": 130,
+            "color": "#ff00007a"
+        }
+    ],
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.verticalScrollbarSize": 1,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.semanticTokenColorCustomizations": { },
+    "editor.snippetSuggestions": "top",
+    "editor.stickyScroll.defaultModel": "indentationModel",
+    "editor.stickyScroll.enabled": true,
+    "editor.stickyScroll.maxLineCount": 3,
+    "editor.suggestFontSize": 15,
+    "editor.suggestLineHeight": 35,
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.tabSize": 4,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 160,
+    "emmet.includeLanguages": {
+        "javascript": "javascript",
+        "razor": "html",
+        "plaintext": "pug"
+    },
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "eslint.enable": true,
+    "eslint.options": {
+        "extensions": [
+            ".js",
+            ".vue",
+            ".jsx",
+            ".tsx",
+            ".ts"
+        ]
+    },
+    "eslint.probe": [
+        "javascript",
+        "vue"
+    ],
+    "eslint.run": "onSave",
     "eslint.timeBudget.onValidation": {
         "warning": 500,
         "error": 1000
     },
-    "prettier.enableDebugLogs": true,
-    "prettier.printWidth": 80,
-    "prettier.tabWidth": 4,
-    "prettier.useTabs": true,
-    "prettier.semi": true,
-    "prettier.singleQuote": true,
-    "prettier.jsxSingleQuote": false,
-    "prettier.trailingComma": "all",
-    "prettier.bracketSpacing": true,
-    "prettier.bracketSameLine": true,
-    "prettier.arrowParens": "avoid",
-    "prettier.requirePragma": true,
-    "prettier.insertPragma": true,
-    "prettier.singleAttributePerLine": true,
-    "prettier.htmlWhitespaceSensitivity": "strict",
-    "prettier.resolveGlobalModules": true,
-    "prettier.withNodeModules": true,
-    "prettier.configPath": "~/.prettierrc",
-    "prettier.prettierPath": "/usr/lib/node_modules/prettier/bin-prettier.js",
-    "prettier.requireConfig": true,
-    "prettier.useEditorConfig": false,
-    /** ESLINT */
-    "eslint.run": "onSave",
-    "eslint.enable": true,
-    "eslint.options": {
-        "extensions": [ ".js", ".vue", ".jsx", ".tsx", ".ts" ]
-    },
+    "eslint.useESLintClass": true,
     "eslint.validate": [
         "js",
         "babel",
@@ -696,25 +352,176 @@
         "javascriptreact",
         "typescriptreact"
     ],
-    "eslint.probe": [
-        "javascript",
-        "vue"
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": true,
+    "explorer.confirmDragAndDrop": true,
+    "explorer.decorations.badges": true,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": true,
+    "explorer.fontSize": 15,
+    "files.associations": {
+        ".sequelizerc": "javascript",
+        ".js": "javascript",
+        ".stylelintrc": "json",
+        ".prettierrc": "json",
+        "*.tsx": "typescriptreact",
+        "*.ts": "typescript",
+        "*.log.*": "log",
+        "*.log": "log",
+        "*.module": "php",
+        "*.install": "php",
+        "*.inc": "php",
+        "Dockerfile*": "dockerfile",
+        "*.yml": "yaml"
+    },
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.firebase": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/bower_components": true,
+        "**/CVS": true,
+        "**/node_modules": true,
+        "**/.trunk/*actions/": true,
+        "**/.trunk/*logs/": true,
+        "**/.trunk/*notifications/": true,
+        "**/.trunk/*out/": true,
+        "**/.trunk/*plugins/": true
+    },
+    "files.insertFinalNewline": true,
+    "files.refactoring.autoSave": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.watcherExclude": {
+        "**/vendor": true,
+        "**/.git": true,
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/node_modules/*/**": true,
+        "node_modules/**": true,
+        "**/node_modules/": true,
+        "**/node_modules": true,
+        "**/vendor/**": true,
+        "vendor/**": true,
+        "/vendor/*": true,
+        "**/vendor/": true,
+        "**/bower_components": true,
+        "**/.sql": true,
+        "**/laradock/**": true,
+        "laradock/**": true,
+        "/laradock/*": true,
+        "**/.trunk/*actions/": true,
+        "**/.trunk/*logs/": true,
+        "**/.trunk/*notifications/": true,
+        "**/.trunk/*out/": true,
+        "**/.trunk/*plugins/": true
+    },
+    "git.autofetch": true,
+    "git.autofetchPeriod": 180,
+    "git.branchProtection": [
+        "main",
+        "dev",
+        "staging",
+        "production"
     ],
-    /** PHP CS */
-    "phpcs.ignorePatterns": [
-        "*/node_modules/*",
-        "*/dist/*",
-        "*/vendor/*",
-        "*/database/*",
-        "*/public/*",
+    "git.confirmSync": true,
+    "git.enableSmartCommit": true,
+    "github.copilot.advanced": { },
+    "github.copilot.autoTrigger": true,
+    "github.copilot.chat.fixTestFailures": true,
+    "github.copilot.chat.scopeSelection": true,
+    "github.copilot.chat.terminalChatLocation": "quickChat",
+    "github.copilot.chat.welcomeMessage": "always",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.editor.enableCodeActions": true,
+    "github.copilot.editor.iterativeFixing": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false,
+        "yaml": true,
+        "php": true,
+        "js": true,
+        "javascript": true,
+        "json": true,
+        "html": true,
+        "blade": true,
+        "blade.php": true,
+        "*.blade.php": true,
+        "css": true,
+        "scss": true,
+        "less": true,
+        "typescript": true,
+        "typescriptreact": true,
+        "javascriptreact": true,
+        "vue": true,
+        "python": true,
+        "java": true
+    },
+    "github.copilot.ignoreCase": true,
+    "github.copilot.languageOverrides": {
+        "python": {
+            "github.copilot.inlineSuggest.enable": true
+        },
+        "javascript": {
+            "github.copilot.inlineSuggest.enable": true
+        }
+    },
+    "github.copilot.multiLineSuggestions": "default",
+    "github.copilot.preferredAccount": "hfmiguel",
+    "github.copilot.renameSuggestions.triggerAutomatically": true,
+    "github.copilot.suggestions.showOnCtrlEnter": false,
+    "github.copilot.suggestions.showOnEnter": true,
+    "github.copilot.suggestions.showOnTab": true,
+    "github.copilot.tabCompletion": "on",
+    "gitlab.aiAssistedCodeSuggestions.enabled": false,
+    "gitlab.aiAssistedCodeSuggestions.showInStatusBar": false,
+    "gitlab.duoChat.enabled": false,
+    "gitlab.showPipelineUpdateNotifications": true,
+    "gitlens.advanced.messages": {
+        "suppressGitVersionWarning": true
+    },
+    "gitlens.ai.experimental.anthropic.model": "claude-3-opus-20240229",
+    "gitlens.ai.experimental.gemini.model": "gemini-1.5-flash-latest",
+    "gitlens.ai.experimental.model": "vscode",
+    "gitlens.ai.experimental.openai.model": "gpt-4-turbo",
+    "gitlens.ai.experimental.provider": "openai",
+    "gitlens.ai.experimental.vscode.model": "copilot:gpt-4",
+    "gitlens.heatmap.locations": [
+        "gutter",
+        "overview",
+        "line"
     ],
-    /** INTELEPHENSE */
-    "intelephense.files.associations": [
-        "*.php",
-        "*.phtml",
-        "*.module",
-        "*.inc"
-    ],
+    "gitlens.integrations.enabled": true,
+    "gitlens.outputLevel": "error",
+    "gitlens.views.branches.files.layout": "tree",
+    "gitlens.views.commitDetails.files.layout": "tree",
+    "gitlens.views.formats.commits.description": "${author, }${agoOrDate} ${tips}",
+    "gitlens.views.remotes.branches.layout": "tree",
+    "gitlens.views.remotes.files.layout": "tree",
+    "gitlens.views.repositories.files.layout": "tree",
+    "gitlens.views.repositories.includeWorkingTree": true,
+    "gitlens.views.repositories.showIncomingActivity": true,
+    "indentRainbow.errorColor": "#ff000056",
+    "indentRainbow.indicatorStyle": "light",
+    "indentRainbow.lightIndicatorStyleLineWidth": 1,
+    "indentRainbow.tabmixColor": "#ff000056",
+    "indentRainbow.updateDelay": 500,
+    "inlineChat.experimental.textButtons": true,
+    "intelephense.diagnostics.argumentCount": true,
+    "intelephense.diagnostics.enable": true,
+    "intelephense.diagnostics.run": "onSave",
+    "intelephense.diagnostics.undefinedClassConstants": true,
+    "intelephense.diagnostics.undefinedConstants": true,
+    "intelephense.diagnostics.undefinedFunctions": false,
+    "intelephense.diagnostics.undefinedMethods": false,
+    "intelephense.diagnostics.undefinedProperties": false,
+    "intelephense.diagnostics.undefinedSymbols": true,
+    "intelephense.diagnostics.undefinedTypes": false,
+    "intelephense.diagnostics.undefinedVariables": true,
+    "intelephense.diagnostics.unexpectedTokens": true,
     "intelephense.environment.documentRoot": "${workspaceFolder}/public",
     "intelephense.environment.includePaths": [
         "${workspaceFolder}",
@@ -724,7 +531,14 @@
         "${workspaceFolder}/app/Models",
         "${workspaceFolder}/vendor",
         "${workspaceFolder}/vendor/*",
-        "${workspaceFolder}/vendor/laravel",
+        "${workspaceFolder}/vendor/laravel"
+    ],
+    "intelephense.environment.shortOpenTag": true,
+    "intelephense.files.associations": [
+        "*.php",
+        "*.phtml",
+        "*.module",
+        "*.inc"
     ],
     "intelephense.files.exclude": [
         "**/node_modules",
@@ -738,7 +552,7 @@
         "**/.vscode/**",
         "**/.history/**",
         "**/.idea/**",
-        "**/.DS_Store/**",
+        "**/.DS_Store/**"
     ],
     "intelephense.files.include": [
         "${workspaceFolder}",
@@ -769,52 +583,283 @@
         "**/*.html",
         "**/*.xml",
         "**/*.sql",
-        "**/*.sh",
+        "**/*.sh"
     ],
-    "quokka.automaticRestart": true,
-    "github.copilot.suggestions.showOnEnter": true,
-    "github.copilot.suggestions.showOnTab": true,
-    "github.copilot.suggestions.showOnCtrlEnter": false,
-    "github.copilot.autoTrigger": true,
-    "gitlens.views.commitDetails.files.layout": "tree",
-    "github.copilot.chat.terminalChatLocation": "quickChat",
-    "github.copilot.advanced": {
-
-    },
-    "inlineChat.experimental.textButtons": true,
-    "github.copilot.chat.fixTestFailures": true,
-    "github.copilot.preferredAccount": "hfmiguel",
-    "github.copilot.chat.welcomeMessage": "always",
-    "github.copilot.chat.scopeSelection": true,
-    "github.copilot.editor.enableAutoCompletions": true,
-    "github.copilot.editor.enableCodeActions": true,
-    "github.copilot.editor.iterativeFixing": true,
-    "github.copilot.multiLineSuggestions": "default",
-    "github.copilot.tabCompletion": "on",
-    "github.copilot.ignoreCase": true,
-    "github.copilot.renameSuggestions.triggerAutomatically": true,
-    "github.copilot.languageOverrides": {
-        "python": {
-            "github.copilot.inlineSuggest.enable": true
-        },
-        "javascript": {
-            "github.copilot.inlineSuggest.enable": true
-        }
-    },
-    "gitlab.duoChat.enabled": false,
-    "gitlab.showPipelineUpdateNotifications": true,
-    "gitlab.aiAssistedCodeSuggestions.enabled": false,
-    "gitlab.aiAssistedCodeSuggestions.showInStatusBar": false,
+    "intelephense.format.braces": "psr12",
+    "intelephense.maxMemory": 2048,
+    "intelephense.rename.namespaceMode": "all",
+    "javascript.referencesCodeLens.enabled": true,
+    "javascript.suggest.autoImports": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "javascript.validate.enable": false,
+    "json.format.keepLines": true,
+    "laravelGotoController.routeListCommand": "artisan route:list --json",
+    "markdown.preview.breaks": true,
+    "markdown.preview.fontSize": 15,
+    "markdownlint.run": "onSave",
+    "material-icon-theme.activeIconPack": "nest",
+    "material-icon-theme.folders.theme": "specific",
+    "namespaceResolver.exclude": "**/node_modules/**",
+    "namespaceResolver.highlightOnOpen": true,
+    "namespaceResolver.highlightOnSave": true,
+    "namespaceResolver.showMessageOnStatusBar": true,
+    "namespaceResolver.sortAlphabetically": true,
+    "namespaceResolver.sortNatural": true,
+    "namespaceResolver.sortOnSave": true,
+    "nginx-conf-hint.syntax": "sublime",
+    "npm.keybindingsChangedWarningShown": true,
+    "php.suggest.basic": false,
+    "php.validate.enable": true,
+    "php.validate.run": "onType",
+    "phpSniffer.run": "onSave",
+    "phpcs.autoConfigSearch": false,
+    "phpcs.enable": true,
+    "phpcs.errorSeverity": 1,
+    "phpcs.ignorePatterns": [
+        "*/node_modules/*",
+        "*/dist/*",
+        "*/vendor/*",
+        "*/database/*",
+        "*/public/*"
+    ],
+    "phpcs.lintOnOpen": true,
+    "phpcs.lintOnSave": true,
+    "phpcs.lintOnType": false,
+    "phpcs.showSources": true,
+    "phpcs.showWarnings": true,
+    "phpcs.warningSeverity": 1,
+    "phpstan.autoConfigSearch": true,
+    "phpstan.enableLanguageServer": false,
+    "phpstan.enabled": false,
+    "phpstan.level": 7,
+    "phpstan.memoryLimit": "1024M",
     "phpstan.options": [
         "-v"
     ],
-    "trunk.autoInit": true,
-    "accessibility.underlineLinks": true,
-    "workbench.experimental.enableNewProfilesUI": true,
+    "phpstan.projectTimeout": 1000000,
+    "phpstan.showProgress": true,
+    "phpstan.timeout": 1000000,
+    "prettier.arrowParens": "avoid",
+    "prettier.bracketSameLine": true,
+    "prettier.bracketSpacing": true,
+    "prettier.configPath": "~/.prettierrc",
+    "prettier.enableDebugLogs": true,
+    "prettier.htmlWhitespaceSensitivity": "strict",
+    "prettier.insertPragma": true,
+    "prettier.jsxSingleQuote": false,
+    "prettier.prettierPath": "/usr/lib/node_modules/prettier/bin-prettier.js",
+    "prettier.printWidth": 80,
+    "prettier.requireConfig": true,
+    "prettier.requirePragma": true,
+    "prettier.resolveGlobalModules": true,
+    "prettier.semi": true,
+    "prettier.singleAttributePerLine": true,
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "prettier.trailingComma": "all",
+    "prettier.useEditorConfig": false,
+    "prettier.useTabs": true,
+    "prettier.withNodeModules": true,
+    "quokka.automaticRestart": true,
+    "quokka.compactMessageOutput": true,
+    "redhat.telemetry.enabled": true,
+    "remote.SSH.remotePlatform": {
+        "OSB-LOCAL-FELIX-TG": "linux",
+        "OSB-PRODUCAO-TG": "linux",
+        "Felix-Contabo": "linux",
+        "OSB-STAGGING-TG": "linux",
+        "Wesley-Contabo": "linux",
+        "ATS-TRAVEL": "linux",
+        "Viasat-CRM": "linux",
+        "algarserra-digitalocean": "linux",
+        "Algarserra-Contabo": "linux",
+        "OSB-Macbook": "macOS",
+        "Macbook-Interno": "macOS",
+        "LuisAndre-MNIR": "linux",
+        "viasat-crm-novo": "linux"
+    },
+    "remote.WSL.fileWatcher.polling": true,
+    "remote.WSL.fileWatcher.pollingInterval": 1000,
+    "remote.autoForwardPortsSource": "hybrid",
     "scm.experimental.showHistoryGraph": false,
-    "terminal.integrated.tabs.location": "left",
-    "gitlens.ai.experimental.model": "vscode",
-    "gitlens.ai.experimental.vscode.model": "copilot:gpt-4",
     "security.promptForRemoteFileProtocolHandling": false,
-    "database-client.capitalizeKeywordsWhenFormatting": true
+    "security.workspace.trust.untrustedFiles": "open",
+    "semgrep.path": "/home/felix/.local/bin/semgrep",
+    "semgrep.scan.jobs": 12,
+    "semgrep.scan.onlyGitDirty": false,
+    "semgrep.scan.pro_intrafile": true,
+    "settingsSync.ignoredSettings": [ ],
+    "snyk.advanced.autoScanOpenSourceSecurity": true,
+    "snyk.trustedFolders": [
+        "${workspaceFolder}"
+    ],
+    "solidity.defaultCompiler": "localFile",
+    "solidity.packageDefaultDependenciesDirectory": "node_modules",
+    "solidity.remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin"
+    ],
+    "sync.autoDownload": true,
+    "terminal.explorerKind": "both",
+    "terminal.integrated.confirmOnExit": "always",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.defaultProfile.linux": "OH-MY-ZSH",
+    "terminal.integrated.defaultProfile.windows": "GitBash",
+    "terminal.integrated.drawBoldTextInBrightColors": true,
+    "terminal.integrated.enableVisualBell": true,
+    "terminal.integrated.experimentalInlineChat": true,
+    "terminal.integrated.fontFamily": "MesloLGS NF,Meslo,Fira Code",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.minimumContrastRatio": 1,
+    "terminal.integrated.mouseWheelZoom": true,
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "OH-MY-ZSH": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        },
+        "sh (2)": {
+            "path": "/usr/bin/sh"
+        }
+    },
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "CommandPrompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [ ],
+            "icon": "terminal-cmd"
+        },
+        "GitBash": {
+            "source": "Git Bash",
+            "path": [
+                "C:\\Program Files\\Git\\bin\\bash.exe"
+            ],
+            "icon": "terminal-bash"
+        },
+        "DebianWSL": {
+            "path": "C:\\WINDOWS\\System32\\wsl.exe",
+            "args": [
+                "-d",
+                "Debian"
+            ]
+        }
+    },
+    "terminal.integrated.rescaleOverlappingGlyphs": true,
+    "terminal.integrated.scrollback": 10000,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "both",
+    "terminal.integrated.shellIntegration.enabled": true,
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.stickyScroll.enabled": false,
+    "terminal.integrated.suggest.enabled": true,
+    "terminal.integrated.suggest.quickSuggestions": true,
+    "terminal.integrated.suggest.suggestOnTriggerCharacters": true,
+    "terminal.integrated.tabs.enableAnimation": true,
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.tabs.location": "left",
+    "terminal.integrated.tabs.showActions": "always",
+    "terminal.integrated.tabs.showActiveTerminal": "always",
+    "thunder-client.saveToWorkspace": false,
+    "todo-tree.filtering.excludeGlobs": [
+        "**/node_modules/*/**",
+        "public/",
+        "**/vendor/*/**",
+        ".git"
+    ],
+    "todo-tree.general.showActivityBarBadge": true,
+    "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
+    "todo-tree.general.statusBar": "tags",
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "FIX",
+        "FEAT"
+    ],
+    "todo-tree.regex.enableMultiLine": true,
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+\\.))\\s*(\\*?\\s*($TAGS))",
+    "todo-tree.tree.showCountsInTree": true,
+    "todohighlight.isEnable": true,
+    "trunk.autoInit": true,
+    "trunk.flakyTestsViewEnabled": true,
+    "trunk.inlineDecoratorsForAllExtensions": true,
+    "trunk.inlineDecoratorsForAllExtensionsEnabled": true,
+    "trunk.numJobs": 12,
+    "trunk.repoScanViewEnabled": true,
+    "trunk.repoScanViewVisible": true,
+    "trunk.showPreexistingIssues": true,
+    "turboConsoleLog.addSemicolonInTheEnd": true,
+    "turboConsoleLog.insertEmptyLineAfterLogMessage": true,
+    "turboConsoleLog.logType": "log",
+    "turboConsoleLog.quote": "`",
+    "typescript.suggest.autoImports": true,
+    "typescript.tsserver.log": "off",
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "vscode-edge-devtools.webhintInstallNotification": true,
+    "vscode_custom_css.imports": [
+        "https://raw.githubusercontent.com/hfmiguel/vs-code-custom-css-loader/main/style.css"
+    ],
+    "vscode_custom_css.statusbar": true,
+    "window.menuBarVisibility": "visible",
+    "window.zoomLevel": 0,
+    "workbench.activityBar.iconClickBehavior": "focus",
+    "workbench.colorCustomizations": {
+        "terminal.background": "#3a3d49",
+        "terminalCursor.background": "#A5A2A2",
+        "terminalCursor.foreground": "#A5A2A2",
+        "terminal.ansiBlue": "#444343",
+        "terminal.ansiBrightBlack": "#5C5855",
+        "terminal.ansiBrightBlue": "#FFF",
+        "terminal.ansiBrightCyan": "#B5E4F4",
+        "terminal.ansiBrightGreen": "#3cff00",
+        "terminal.ansiBrightMagenta": "#A16A94",
+        "terminal.ansiBrightRed": "#DB2D20",
+        "terminal.ansiBrightWhite": "#F7F7F7",
+        "terminal.ansiBrightYellow": "#FDED02",
+        "terminal.ansiCyan": "#B5E4F4",
+        "terminal.ansiGreen": "#DB2D20",
+        "terminal.ansiMagenta": "#A16A94",
+        "terminal.ansiBlack": "#ffffff",
+        "terminal.ansiRed": "#910a00",
+        "terminal.ansiWhite": "#ffffff",
+        "terminal.ansiYellow": "#8f8500",
+        "minimap.errorHighlight": "#db2c207c",
+        "minimap.warningHighlight": "#fdec026b",
+        "minimap.size": "fit",
+        "editorRuler.foreground": "#afafaf47",
+        "editorOverviewRuler.warningForeground": "#00000000"
+    },
+    "workbench.colorTheme": "Shades of Purple (Super Dark)",
+    "workbench.editor.decorations.colors": true,
+    "workbench.editor.editorActionsLocation": "titleBar",
+    "workbench.editor.languageDetectionHints": {
+        "untitledEditors": true,
+        "notebookEditors": false
+    },
+    "workbench.editorAssociations": {
+        "*.sql": "default"
+    },
+    "workbench.experimental.enableNewProfilesUI": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.localHistory.enabled": true,
+    "workbench.startupEditor": "newUntitledFile",
 }

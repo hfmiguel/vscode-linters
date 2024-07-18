@@ -16,7 +16,7 @@
 
 
 
-### WSL First steps (  root user ) 
+### WSL First steps (  root user )
 
 ```
 ## login as root
@@ -30,7 +30,7 @@ sudo aptitude install build-essential -y
 sudo aptitude install ssh wget ca-certificates git unzip curl -y
 ```
 
-### PHP installation  (  root user ) 
+### PHP installation  (  root user )
 
 #### Debian
 ```
@@ -70,7 +70,7 @@ Type php -v into your terminal to see the output.
 
 php -v
 
-Output: 
+Output:
 PHP 8.2.7 (cli) (built: Jun  9 2023 07:37:35) (NTS)
 Copyright (c) The PHP Group
 Zend Engine v4.2.7, Copyright (c) Zend Technologies
@@ -90,12 +90,12 @@ php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo '
 php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 ```
 
-### NODE ( root ) 
+### NODE ( root )
 
 ```
 sudo su
 
-cd 
+cd
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
 aptitude update &&
 aptitude install nodejs -y
@@ -148,18 +148,18 @@ touch /home/$USER/phpcs.xml
 - Update the PHPCS config path
 
 ```
-phpcs --config-set default_standard /home/$USER/phpcs.xml 
+phpcs --config-set default_standard /home/$USER/phpcs.xml
 ```
 
------------------------- 
------------------------- 
+------------------------
+------------------------
 
-### PHP STAN 
+### PHP STAN
 1. Install
     - composer global require --dev phpstan/phpstan
 2. Create the symbolic link
     - sudo ln -s /home/$USER/.config/composer/vendor/bin/phpstan /usr/local/bin/phpstan
-3. Run: 
+3. Run:
 
 ```
 phpstan analyse -l 9 --error-format=table path/to/folder
@@ -177,14 +177,14 @@ phpinsights analyse -v app/ --fix
 ```
 
 
------------------------- 
------------------------- 
+------------------------
+------------------------
 
 ### USING PHPCS
 ```
 phpcs -p You/Folder  or Your/Folder/File.php
 
-Example: 
+Example:
 
 phpcs -p -v -w /home/YourUser/project/
 
@@ -238,8 +238,8 @@ Time: 114ms; Memory: 10MB
 
 ```
 
------------------------- 
------------------------- 
+------------------------
+------------------------
 
 ### JS LINTERS ( ROOT )
 ```
@@ -248,23 +248,23 @@ npm i -g prettier eslint-config-prettier eslint-plugin-prettier
 npm install --global yarn
 ```
 
-### GIT ( NON ROOT ) 
+### GIT ( NON ROOT )
 ```
-- For local config . If want to set this settings for all projects ,use : git config --global 
-git config pull.rebase false 
+- For local config . If want to set this settings for all projects ,use : git config --global
+git config pull.rebase false
 git config user.name "Your Username"
 git config user.email "Your git email "
 ```
 
------------------------- 
------------------------- 
+------------------------
+------------------------
 
 
 ### VS CODE Settings
 
 - Type into your VSCODE CTRL + SHIFT + P and type:  settings.json
   - Click to open Remote settings ( WSL + YourWslDistroName )
-  - Or 
+  - Or
   - Click to open : Workspace Settings
 
 - Why ? Because some config not work if you put into your User Settings ( settings that are sync with your github/microsoft account )
@@ -276,11 +276,11 @@ git config user.email "Your git email "
 ![Alt text](image.png)
 
 
------------------------- 
------------------------- 
+------------------------
+------------------------
 
 
-### EXTENSIONS 
+### EXTENSIONS
 ```
 Nome: PHP Intelephense
 ID: bmewburn.vscode-intelephense-client
@@ -328,4 +328,15 @@ ID: esbenp.prettier-vscode
 Descrição: Code formatter using prettier
 Editor: Prettier
 Link do Marketplace do VS: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+```
+
+#### Trunk Check
+##### Trunk is a pretty cool extension that use the power of the previous installed extensions and linters to give you, visual feedbacks about your code issues.
+```
+Nome: Trunk Check
+ID: trunk.io
+Descrição: Automated Code Quality for Teams: universal formatting, linting, static analysis, and security
+Versão: 3.18.4
+Editor: Trunk
+Link do Marketplace do VS: https://marketplace.visualstudio.com/items?itemName=Trunk.io
 ```
