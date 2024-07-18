@@ -16,7 +16,9 @@
         "nunomaduro/larastan": "^2.0",
         "nunomaduro/phpinsights": "^2.9",
         "rector/rector": "^1.0",
-        "larastan/larastan": "^2.0"
+        "larastan/larastan": "^2.0",
+        "pheromone/phpcs-security-audit": "^2.0",
+        "vimeo/psalm": "^0.3.14"
     },
     "config": {
         "allow-plugins": {

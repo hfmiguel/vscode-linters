@@ -1,10 +1,9 @@
 includes:
-    - /home/felix/.config/composer/vendor/larastan/larastan/extension.neon
-    - phar://phpstan.phar/conf/bleedingEdge.neon
-
+  - ./vendor/larastan/larastan/extension.neon
+  - phar://phpstan.phar/conf/bleedingEdge.neon
 
 parameters:
-  level: 6
+  level: 7  # Consider lowering the level for better performance
   phpVersion: 80299
   disableMigrationScan: true
   disableSchemaScan: true
@@ -12,7 +11,6 @@ parameters:
   noModelMake: false
   noUnnecessaryCollectionCallOnly: ['count', 'first']
   checkUnusedViews: true
-  tmpDir: tmp
   checkMissingIterableValueType: true
   paths:
     - app/
@@ -21,14 +19,20 @@ parameters:
     - database/
   excludePaths:
     - storage
+    - resources/views/*
+    - resources/webfonts/*
     - vendor
     - node_modules
     - public
-    - *.blade.php
+    - bootstrap
+    - lang
+    - docker
+    - tests/*/data/*
   fileExtensions:
     - php
     - module
     - inc
+  tmpDir: tmp
   ignoreErrors:
     - '#Call to an undefined method Illuminate\\Support\\HigherOrder#'
     - '#Call to an undefined method [a-zA-Z0-9\\_]+::assignUsers()#'
@@ -54,7 +58,7 @@ parameters:
     - '#Call to an undefined method [a-zA-Z0-9\\_]+::goToPage()#'
     - '#Access to an undefined property [a-zA-Z0-9\\_]+::\$globalFilters#'
   parallel:
-    jobSize: 20
-    maximumNumberOfProcesses: 32
-    minimumNumberOfJobsPerProcess: 2
+    jobSize: 10
+    maximumNumberOfProcesses: 12
+    minimumNumberOfJobsPerProcess: 1
     processTimeout: 1000.0
