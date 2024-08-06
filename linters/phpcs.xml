@@ -4,7 +4,6 @@
 
   <!-- Excluir diretórios desnecessários -->
   <exclude-pattern>*/tests/*</exclude-pattern>
-  <exclude-pattern>*/data/*</exclude-pattern>
   <exclude-pattern>*/vendor/*</exclude-pattern>
   <exclude-pattern>*/node_modules/*</exclude-pattern>
 
@@ -14,7 +13,7 @@
   <arg name="colors" />
   <arg value="sp" />
   <arg name="encoding" value="utf-8" />
-  <ini name="memory_limit" value="512M" />
+  <ini name="memory_limit" value="1024M" />
 
   <!-- Padrões de codificação -->
   <rule ref="PSR1" />
@@ -145,6 +144,7 @@
     <exclude-pattern>*/vendor/*</exclude-pattern>
     <properties>
       <property name="required" value="true" />
+      <property name="returnComment" value="true" />
     </properties>
   </rule>
 
@@ -208,6 +208,5 @@
 
   <!-- Regras do Zend -->
   <rule ref="Zend.Debug.CodeAnalyzer" />
-
 
 </ruleset>

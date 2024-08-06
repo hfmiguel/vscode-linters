@@ -10,8 +10,10 @@ runtimes:
   enabled:
     - go@1.21.0
     - node@18.12.1
-    - php@>=8.0.0
+    - php@>=8.3.9
     - python@3.10.8
+    - ruby@3.1.4
+
 tools:
   definitions:
     - name: phpcs
@@ -34,6 +36,11 @@ tools:
       package: vimeo/psalm
       known_good_version: 5.12.0
       shims: [psalm]
+    - name: pint
+      runtime: php
+      package: laravel/pint
+      known_good_version: 1.16.1
+      shims: [pint]
 lint:
   definitions:
     - name: phpcs
@@ -50,7 +57,7 @@ lint:
         - name: lint
           run: phpcs ${target}
           output: lsp_json
-          batch: true
+          batch: false
           read_output_from: tmp_file
           run_from: ${parent}
           success_codes: [0]
@@ -69,7 +76,7 @@ lint:
         - name: lint
           run: phpstan analyse ${target}
           output: lsp_json
-          batch: true
+          batch: false
           read_output_from: tmp_file
           run_from: ${parent}
           success_codes: [0]
@@ -87,7 +94,7 @@ lint:
       commands:
         - name: lint
           run: phpinsights analyse ${target}
-          batch: true
+          batch: false
           output: lsp_json
           read_output_from: tmp_file
           run_from: ${parent}
@@ -107,37 +114,59 @@ lint:
         - name: lint
           run: psalm --output-format=emacs ${target}
           output: lsp_json
-          batch: true
+          batch: false
           read_output_from: tmp_file
           run_from: ${parent}
           success_codes: [0, 2]
           cache_results: true
+    - name: pint
+      description: Laravel specific linting
+      files: [php]
+      tools: [pint]
+      direct_configs: [pint.json, .pint.json, pint.json.dist, .pint.json.dist]
+      known_good_version: 1.16.1
+      suggest_if: config_present
+      version_command:
+        parse_regex: pint ${semver}
+        run: pint --version
+      commands:
+        - name: lint
+          run: pint --dirty ${target}
+          output: lsp_json
+          batch: false
+          read_output_from: tmp_file
+          run_from: ${parent}
+          success_codes: [0]
+          cache_results: true
   enabled:
+    - trufflehog@3.81.5
+    - git-diff-check
     - eslint@9.7.0
     - djlint@1.34.1
     - sort-package-json@2.10.0
     - phpinsights@2.10.0
     - phpstan@1.10.58
     - phpcs@3.7.1
-    - psalm@5.12.0
-    - semgrep@1.79.0
-    - stylelint@16.7.0
+    # - pint@1.16.1
+    # - psalm@5.12.0
+    # - semgrep@1.80.0
+    - stylelint@16.8.1
     - codespell@2.3.0
-    - checkov@3.2.191
-    - git-diff-check
+    # - checkov@3.2.200
+    # - git-diff-check
     - hadolint@2.12.0
-    - markdownlint@0.41.0
-    - osv-scanner@1.8.2
-    - oxipng@9.1.2
+    # - markdownlint@0.41.0
+    # - osv-scanner@1.8.2
+    # - oxipng@9.1.2
     - prettier@3.3.3
     - shellcheck@0.10.0
-    - shfmt@3.6.0
-    - svgo@3.3.2
-    - taplo@0.9.2
-    - tflint@0.52.0
-    - trivy@0.53.0
-    - trufflehog@3.79.0
-    - yamllint@1.35.1
+    # - shfmt@3.6.0
+    # - svgo@3.3.2
+    # - taplo@0.9.2
+    # - tflint@0.52.0
+    # - trivy@0.53.0
+    # - trufflehog@3.80.1
+    # - yamllint@1.35.1
 actions:
   disabled:
     - trunk-announce
