@@ -169,13 +169,14 @@ phpinsights analyse -v app/ --fix
 ---------------------
 ### Creating simbolic links for composer packages
 
+```
 sudo ln -s /home/felix/.config/composer/vendor/bin/phpinsights /usr/local/bin/phpinsights
 sudo ln -s /home/$USER/.config/composer/vendor/bin/phpstan /usr/local/bin/phpstan
 sudo ln -s /home/$USER/.config/composer/vendor/squizlabs/php_codesniffer/bin/phpcs /usr/local/bin/phpcs
 sudo ln -s /home/$USER/.config/composer/vendor/squizlabs/php_codesniffer/bin/phpcbf /usr/local/bin/phpcbf
 sudo ln -s /home/$USER/.config/composer/vendor/bin/pint /usr/local/bin/pint
 sudo ln -s /home/$USER/.config/composer/vendor/bin/rector /usr/local/bin/rector
-
+```
 ------------------------
 ------------------------
 
