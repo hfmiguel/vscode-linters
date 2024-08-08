@@ -123,11 +123,6 @@ composer global require squizlabs/php_codesniffer --dev
  - probably will be : /home/$USER/.config/composer/
  - Copy the content of composer.json to your composer.json and run *composer install*
 
-
-### Create a shortcut to phpcs to run from anywhere in cli
-sudo ln -s /home/$USER/.config/composer/vendor/squizlabs/php_codesniffer/bin/phpcs /usr/local/bin/phpcs
-sudo ln -s /home/$USER/.config/composer/vendor/squizlabs/php_codesniffer/bin/phpcbf /usr/local/bin/phpcbf
-
 phpcs --config-set php_path /usr/bin/php
 phpcs --config-set default_standard PSR12
 phpcs --config-set severity 1
@@ -157,10 +152,6 @@ phpcs --config-set default_standard /home/$USER/phpcs.xml
 ### PHP STAN
 1. Install
     - composer global require --dev phpstan/phpstan
-2. Create the symbolic link
-    - sudo ln -s /home/$USER/.config/composer/vendor/bin/phpstan /usr/local/bin/phpstan
-3. Run:
-
 ```
 phpstan analyse -l 9 --error-format=table path/to/folder
 ```
@@ -169,13 +160,21 @@ phpstan analyse -l 9 --error-format=table path/to/folder
 ### PHP INSIGHTS
 1. Install
  - composer require nunomaduro/phpinsights --dev
-2. Create the symbolic link
- - sudo ln -s /home/felix/.config/composer/vendor/bin/phpinsights /usr/local/bin/phpinsights
 3. Run
 ```
 phpinsights analyse -v app/ --fix
 ```
 
+---------------------
+---------------------
+### Creating simbolic links for composer packages
+
+sudo ln -s /home/felix/.config/composer/vendor/bin/phpinsights /usr/local/bin/phpinsights
+sudo ln -s /home/$USER/.config/composer/vendor/bin/phpstan /usr/local/bin/phpstan
+sudo ln -s /home/$USER/.config/composer/vendor/squizlabs/php_codesniffer/bin/phpcs /usr/local/bin/phpcs
+sudo ln -s /home/$USER/.config/composer/vendor/squizlabs/php_codesniffer/bin/phpcbf /usr/local/bin/phpcbf
+sudo ln -s /home/$USER/.config/composer/vendor/bin/pint /usr/local/bin/pint
+sudo ln -s /home/$USER/.config/composer/vendor/bin/rector /usr/local/bin/rector
 
 ------------------------
 ------------------------
