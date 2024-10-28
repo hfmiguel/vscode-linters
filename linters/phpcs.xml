@@ -1,12 +1,14 @@
 <?xml version="1.0"?>
-<ruleset name="Custom ruleset">
+<ruleset name="Laravel PHP custom rule.">
     <description>My rules for PHP CodeSniffer</description>
-
-    <!-- Excluir diretórios desnecessários -->
     <exclude-pattern>*/tests/*</exclude-pattern>
     <exclude-pattern>*/vendor/*</exclude-pattern>
     <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/storage/*</exclude-pattern>
 
+    <!-- Configurações gerais -->
+    <!-- Configurações gerais -->
+    <!-- Configurações gerais -->
     <!-- Configurações gerais -->
     <arg name="extensions" value="php,inc,lib" />
     <arg name="report" value="summary" />
@@ -16,36 +18,51 @@
     <ini name="memory_limit" value="1024M" />
 
     <!-- Padrões de codificação -->
+    <!-- Padrões de codificação -->
+    <!-- Padrões de codificação -->
+    <!-- Padrões de codificação -->
     <rule ref="PSR1" />
     <rule ref="PSR2" />
     <rule ref="PSR12" />
     <rule ref="PHPCompatibility" />
     <rule ref="Security" />
-
     <rule ref="Security">
         <exclude name="PHPCS_SecurityAudit.Drupal7.DynQueries.D7DynQueriesDirectVar" />
     </rule>
 
     <!-- Regras personalizadas de segurança -->
+    <!-- Regras personalizadas de segurança -->
+    <!-- Regras personalizadas de segurança -->
+    <!-- Regras personalizadas de segurança -->
     <rule ref="Security.BadFunctions.CallbackFunctions.WarnCallbackFunctions">
         <severity>error</severity>
     </rule>
-
     <rule ref="Security.BadFunctions.CryptoFunctions.WarnCryptoFunc">
         <severity>error</severity>
     </rule>
 
+    <!-- Regras específicas do PSR2 -->
+    <!-- Regras específicas do PSR2 -->
+    <!-- Regras específicas do PSR2 -->
     <!-- Regras específicas do PSR2 -->
     <rule ref="PSR2.Classes.PropertyDeclaration" />
     <rule ref="PSR2.Methods.MethodDeclaration" />
     <rule ref="PSR2.Files.EndFileNewline" />
 
     <!-- Regras específicas do PSR12 -->
+    <!-- Regras específicas do PSR12 -->
+    <!-- Regras específicas do PSR12 -->
+    <!-- Regras específicas do PSR12 -->
+    <!-- Regras específicas do PSR12 -->
     <rule ref="PSR12.Files.OpenTag" />
     <rule ref="PSR12.Functions.ReturnTypeDeclaration">
         <severity>error</severity>
     </rule>
 
+    <!-- Regras do PHPCompatibility -->
+    <!-- Regras do PHPCompatibility -->
+    <!-- Regras do PHPCompatibility -->
+    <!-- Regras do PHPCompatibility -->
     <!-- Regras do PHPCompatibility -->
     <rule ref="PHPCompatibility.Variables.ForbiddenThisUseContexts.OutsideObjectContext">
         <exclude-pattern>.*</exclude-pattern>
@@ -64,14 +81,16 @@
     </rule>
 
     <!-- Regras gerais -->
+    <!-- Regras gerais -->
+    <!-- Regras gerais -->
+    <!-- Regras gerais -->
+    <!-- Regras gerais -->
     <rule ref="Generic.PHP.Syntax">
         <message>Erro de sintaxe encontrado: %s</message>
     </rule>
-
     <rule ref="Generic.PHP.DeprecatedFunctions">
         <message>Uso de função deprecada: %s. Considere uma alternativa.</message>
     </rule>
-
     <rule ref="Generic.PHP.LowerCaseKeyword" />
     <rule ref="Generic.Strings.UnnecessaryStringConcat" />
     <rule ref="Generic.Classes.DuplicateClassName" />
@@ -80,16 +99,20 @@
     <rule ref="Generic.Debug.JSHint" />
     <rule ref="Generic.Debug.CSSLint" />
     <rule ref="Generic.NamingConventions.ConstructorName" />
-
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter" />
+    <rule ref="Generic.Commenting.Todo" />
+    <rule ref="Generic.NamingConventions.UpperCaseConstantName" />
+    <rule ref="Generic.NamingConventions.CamelCapsFunctionName" />
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent" />
+    <rule ref="Generic.CodeAnalysis.EmptyStatement" />
+    <rule ref="Generic.ControlStructures.InlineControlStructure" />
     <!-- Nível de aninhamento -->
     <rule ref="Generic.Metrics.NestingLevel.TooHigh">
         <properties>
-            <property name="maxNestingLevel" value="5" />
             <property name="message"
-                value="O nível de aninhamento é muito alto. O máximo permitido é 3." />
+                value="Nesting level is too high (%s). The configured maximum is %s." />
         </properties>
     </rule>
-
     <!-- Complexidade ciclomática -->
     <rule ref="Generic.Metrics.CyclomaticComplexity">
         <properties>
@@ -97,24 +120,20 @@
             <property name="absoluteComplexity" value="14" />
         </properties>
     </rule>
-
     <!-- Comprimento de linha -->
     <rule ref="Generic.Files.LineLength">
         <properties>
             <property name="lineLimit" value="110" />
             <property name="absoluteLineLimit" value="120" />
             <property name="ignoreComments" value="true" />
-            <property name="ignoreStrings" value="true" />
         </properties>
     </rule>
-
     <rule ref="Generic.Files.LineLength.MaxExceeded">
         <message>Line contains %2$s chars, which is more than the limit of %1$s</message>
     </rule>
     <rule ref="Generic.Files.LineLength.TooLong">
         <message>Line longer than %s characters; contains %s characters</message>
     </rule>
-
     <!-- Funções proibidas -->
     <rule ref="Generic.PHP.ForbiddenFunctions">
         <properties>
@@ -126,12 +145,6 @@
             </property>
         </properties>
     </rule>
-
-    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter" />
-    <rule ref="Generic.Commenting.Todo" />
-    <rule ref="Generic.ControlStructures.InlineControlStructure" />
-
-    <!-- Indentação -->
     <rule ref="Generic.WhiteSpace.ScopeIndent">
         <properties>
             <property name="ignoreIndentationTokens" type="array">
@@ -143,87 +156,77 @@
         </properties>
     </rule>
 
+
+    <!-- Regras do Squiz -->
+    <!-- Regras do Squiz -->
+    <!-- Regras do Squiz -->
+    <!-- Regras do Squiz -->
     <!-- Regras do Squiz -->
     <rule ref="Squiz.NamingConventions.ValidVariableName.NotCamelCaps" />
     <rule ref="Squiz.Scope.MethodScope" />
     <rule ref="Squiz.Scope.StaticThisUsage" />
-
+    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing" />
+    <rule ref="Squiz.WhiteSpace.SemicolonSpacing" />
+    <rule ref="Squiz.Commenting.BlockComment" />
+    <rule ref="Squiz.Commenting.DocCommentAlignment" />
     <rule ref="Squiz.Commenting.FunctionComment">
         <exclude-pattern>*/vendor/*</exclude-pattern>
-        <properties>
-            <property name="required" value="true" />
-            <property name="returnComment" value="true" />
-            <property name="paramComment" value="true" />
-        </properties>
     </rule>
-
     <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
         <properties>
             <property name="ignoreBlankLines" value="true" />
         </properties>
     </rule>
-
     <rule ref="Squiz.WhiteSpace.OperatorSpacing.SpacingBefore">
         <exclude-pattern>*</exclude-pattern>
     </rule>
-
     <rule ref="Squiz.WhiteSpace.OperatorSpacing.SpacingAfter">
         <exclude-pattern>*</exclude-pattern>
     </rule>
-
     <rule ref="Squiz.WhiteSpace.OperatorSpacing">
         <properties>
             <property name="ignoreNewlines" value="false" />
-            <property name="ignoreAdjacent" value="true" />
-            <property name="operators" type="array">
-                <element value="=" />
-                <element value="==" />
-                <element value="===" />
-                <element value="!=" />
-                <element value="!==" />
-                <element value=">" />
-                <element value=">=" />
-                <element value="&lt;" />
-                <element value="&lt;=" />
-                <element value="+" />
-                <element value="-" />
-                <element value="*" />
-                <element value="/" />
-                <element value="%" />
-                <element value="." />
-                <element value="**" />
-                <element value="??" />
-                <element value="instanceof" />
-            </property>
         </properties>
     </rule>
+    <rule ref="Squiz.Operators.ValidLogicalOperators" />
 
-    <rule ref="Squiz.Operators.ValidLogicalOperators">
-        <properties>
-            <property name="allowAnd" value="false" />
-            <property name="allowOr" value="false" />
-        </properties>
-    </rule>
+
+    <!-- Regras do PEAR -->
+    <!-- Regras do PEAR -->
+    <!-- Regras do PEAR -->
+    <!-- Regras do PEAR -->
+    <!-- Regras do PEAR -->
+    <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent" />
+    <rule ref="PEAR.WhiteSpace.ScopeClosingBrace" />
+    <rule ref="PEAR.Commenting.FunctionComment" />
 
     <!-- Regras do SlevomatCodingStandard -->
-    <rule ref="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming">
-        <properties>
-            <property name="maxDepthOfInheritance" value="3" />
-        </properties>
-    </rule>
-
-    <rule ref="SlevomatCodingStandard.Namespaces.NamespaceDeclaration">
-        <properties>
-            <property name="linesCountBeforeNamespace" value="1" />
-        </properties>
-    </rule>
-
+    <!-- Regras do SlevomatCodingStandard -->
+    <!-- Regras do SlevomatCodingStandard -->
+    <!-- Regras do SlevomatCodingStandard -->
+    <!-- Regras do SlevomatCodingStandard -->
+    <!-- Regras do SlevomatCodingStandard -->
     <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison" />
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator" />
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireShortTernaryOperator" />
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireMultiLineTernaryOperator" />
+    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes" />
+    <rule ref="SlevomatCodingStandard.Classes.ClassMemberSpacing" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceEqualOperator" />
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint" />
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint" />
+    <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly" />
+    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint" />
+    <rule ref="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming" />
+    <rule ref="SlevomatCodingStandard.Namespaces.NamespaceDeclaration" />
+
 
     <!-- Regras do Zend -->
+    <!-- Regras do Zend -->
+    <!-- Regras do Zend -->
+    <!-- Regras do Zend -->
+    <!-- Regras do Zend -->
     <rule ref="Zend.Debug.CodeAnalyzer" />
-
 </ruleset>
